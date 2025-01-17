@@ -1,4 +1,5 @@
 ---
+import Footer from "@/components/Footer.astro"
 import Navbar from "@/components/Navbar.astro"
 import WhatsappButton from "@/components/WhatsappButton.astro"
 import { ClientRouter } from "astro:transitions"
@@ -18,17 +19,14 @@ const pageTitle = isIndex ? title : `Difase | ${title}`
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
-    <link rel="icon" type="image/svg+xml" href="isotipo.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <ClientRouter />
   </head>
-  <body class="font-sono">
+  <body class="font-quicksand">
     <Navbar />
     <WhatsappButton />
     <slot />
-    <script>
-      import { register } from "swiper/element/bundle"
-      register()
-    </script>
+    <Footer />
   </body>
 </html>
 
@@ -47,9 +45,10 @@ const pageTitle = isIndex ? title : `Difase | ${title}`
     src: url(/fonts/LTEnergy-Regular.otf);
   }
   @font-face {
-    font-family: "Sono";
+    font-family: "Quicksand";
+    src: url(/fonts/Quicksand-VariableFont.ttf);
+    font-weight: 100 900;
     font-style: normal;
-    font-size: 100 700;
-    src: url(/fonts/Sono-Regular.woff2);
+    font-display: swap;
   }
 </style>

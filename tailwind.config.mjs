@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         oblivion: ["Oblivion", "system-ui"],
         energy: ["Energy", "system-ui"],
-        sono: ["Sono", "system-ui"],
+        quicksand: ["Quicksand", "system-ui"],
       },
     },
   },
