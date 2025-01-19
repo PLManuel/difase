@@ -25,7 +25,9 @@ const pageTitle = isIndex ? title : `Difase | ${title}`
   <body class="font-quicksand">
     <Navbar />
     <WhatsappButton />
-    <slot />
+    <main class="overflow-x-hidden">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
@@ -36,7 +38,7 @@ const pageTitle = isIndex ? title : `Difase | ${title}`
     font-style: normal;
     font-size: 100 700;
     font-display: swap;
-    src: url(/fonts/OblivionFuture.woff2) format("woff2");
+    src: url(/fonts/OblivionFuture.woff2);
   }
   @font-face {
     font-family: "Energy";

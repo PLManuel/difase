@@ -1,5 +1,6 @@
 ---
 import Modal from "@/components/Modal.astro"
+import { Icon } from "astro-icon/components"
 ---
 
 <header
@@ -7,12 +8,8 @@ import Modal from "@/components/Modal.astro"
 >
   <section class="w-36 overflow-hidden py-2 px-7 logo-difase mr-5">
     <a href="/" class="flex flex-col justify-center items-center gap-2">
-      <img src="isotipo.svg" class="w-20 aspect-square" alt="" />
-      <img
-        src="logotipo.svg"
-        alt=""
-        class="logotipo-difase w-full aspect-[73/14]"
-      />
+      <Icon name="isotipo" class="w-20 h-auto aspect-square max-w-full" />
+      <Icon name="logotipo" class="logotipo-difase w-full aspect-[73/14]" />
     </a>
   </section>
   <section class="flex flex-col w-full">
@@ -29,89 +26,18 @@ import Modal from "@/components/Modal.astro"
         #bbb 95%
       );"
     >
-      <section class="flex gap-7">
-        <a
-          href=""
-          class="hover:text-blue-800 text-blue-950 transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="3.5rem"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-            ></path></svg
-          >
+      <section class="flex gap-7 redes-sociales">
+        <a href="">
+          <Icon name="logos/facebook-icon" class="w-9 h-14" />
         </a>
-        <a
-          href=""
-          class="hover:text-blue-800 text-blue-950 transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="3.5rem"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-            ></path>
-            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-            <path d="M16.5 7.5v.01"></path>
-          </svg>
+        <a href="">
+          <Icon name="logos/instagram-icon" class="w-9 h-14" />
         </a>
-        <a
-          href=""
-          class="hover:text-blue-800 text-blue-950 transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="3.5rem"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path
-              d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
-          >
+        <a href="">
+          <Icon name="logos/x-icon" class="w-9 h-14" />
         </a>
-        <a
-          href=""
-          class="hover:text-blue-800 text-blue-950 transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="3.5rem"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z"
-            ></path><path d="M10 9l5 3l-5 3z"></path></svg
-          >
+        <a href="">
+          <Icon name="logos/youtube-icon" class="w-9 h-14" />
         </a>
       </section>
       <div
@@ -132,23 +58,23 @@ import Modal from "@/components/Modal.astro"
       <nav class="flex-1 flex justify-center nav-disafe text-white h-full">
         <ul class="flex">
           <li>
-            <a class="block h-full px-5 content-center" href="/">Inicio</a>
+            <a href="/">Inicio</a>
           </li>
           <li>
-            <a class="block h-full px-5 content-center" href="/">Nosotros</a>
+            <a href="/">Nosotros</a>
           </li>
           <li>
-            <a class="block h-full px-5 content-center" href="/">Catalogo</a>
+            <a href="/">Catalogo</a>
           </li>
           <li>
-            <a class="block h-full px-5 content-center" href="/">Servicio</a>
+            <a href="/">Servicio</a>
           </li>
           <li>
-            <a class="block h-full px-5 content-center" href="/">Contactanos</a>
+            <a href="/">Contactanos</a>
           </li>
         </ul>
       </nav>
-      <section class="">
+      <section>
         <Modal />
       </section>
     </div>
@@ -156,6 +82,13 @@ import Modal from "@/components/Modal.astro"
 </header>
 
 <style>
+  ul a {
+    @apply block h-full px-5 content-center hover:text-blue-950 font-medium transition-colors duration-300;
+  }
+
+  .redes-sociales a {
+    @apply hover:text-blue-800 text-blue-950 transition-colors duration-300;
+  }
   .logo-difase {
     transition: all 0.3s ease;
     interpolate-size: allow-keywords;

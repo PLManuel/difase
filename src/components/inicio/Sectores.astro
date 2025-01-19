@@ -1,0 +1,32 @@
+---
+import SlideSectores from "./SlideSectores.astro";
+---
+
+<section class="bg-blue-900 py-14 mt-20 text-white">
+  <div class="max-w-[1100px] mx-auto flex">
+    <div class="flex items-center justify-center w-80">
+      <h2 class="font-energy text-6xl uppercase text-center">
+        soluciones<br />para cada<br />
+        <strong
+          class="tracking-wider bg-clip-text text-transparent"
+          style="background-image: linear-gradient(45deg,#ccc 5%,#fff 10%,#ccc 30%,#ddd 50%,#ccc 70%,#fff 80%,#bbb 95%);"
+        >
+          sector
+        </strong>
+      </h2>
+    </div>
+    <div class="min-w-0">
+      <swiper-container
+        class="-skew-x-12"
+        slides-per-view="3"
+        space-between="10"
+        speed="500"
+        loop="true"
+      >
+        <SlideSectores sector="farmaceutico" />
+        <SlideSectores sector="alimentario" />
+        <SlideSectores sector="minero" />
+      </swiper-container>
+    </div>
+  </div>
+</section>

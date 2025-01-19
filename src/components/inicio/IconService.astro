@@ -1,0 +1,47 @@
+---
+interface Props {
+  service: string
+}
+const {service} = Astro.props
+---
+<article class="flex flex-col items-center">
+  <div class="w-20 skew-x-6 h-20 mr-2">
+    <div class="h-full w-full -skew-x-6 flex items-center justify-center">
+      <slot/>
+    </div>
+  </div>
+  <h3
+    class="uppercase font-energy text-center mt-5 text-xl tracking-wider text-blue-950"
+  >
+    {service}
+  </h3>
+</article>
+
+<style>
+  article > div {
+    position: relative;
+    overflow: visible;
+  }
+
+  article > div::before,
+  article > div::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 110%;
+    height: 110%;
+    z-index: -1;
+  }
+
+  article > div::before {
+    background-color: rgba(17, 0, 255, 0.555);
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+
+  article > div::after {
+    background-color: rgba(0, 31, 131, 0.8);
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+</style>
