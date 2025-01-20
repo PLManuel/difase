@@ -1,0 +1,95 @@
+<section class="mt-20 text-white h-[40rem] flex items-center relative">
+  <img
+    src="images/inicio/catalogo-1.webp"
+    class="w-52 absolute skew-x-6 -top-32 z-10 left-28 rotate-6"
+    alt=""
+  />
+  <img
+    src="images/inicio/catalogo-2.webp"
+    class="w-72 absolute skew-x-6 -top-10 z-10 right-14 -rotate-3"
+    alt=""
+  />
+  <img
+    src="images/inicio/catalogo-3.webp"
+    class="w-72 absolute skew-x-6 bottom-28 z-10 left-44 -rotate-6"
+    alt=""
+  />
+  <img
+    src="images/inicio/catalogo-4.webp"
+    class="w-72 absolute skew-x-6 bottom-14 z-10 right-40 rotate-3"
+    alt=""
+  />
+  <div
+    class="bg-blue-950 h-[30rem] skew-y-[8deg] w-full flex items-center justify-center"
+  >
+    <div class="-skew-y-[8deg] max-w-screen-sm text-center">
+      <h2 class="font-energy text-5xl uppercase mb-2">
+        Descubra nuestro catalogo
+      </h2>
+      <p class="mx-10">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod enim odit
+        cumque saepe non perspiciatis sequi beatae! Quae, reprehenderit
+        deleniti.
+      </p>
+      <button
+        class="border-white border-2 py-2 px-4 mx-auto block mt-10 uppercase -skew-x-12 bg-blue-900 text-white tracking-widest transition-all hover:px-7 duration-300 font-oblivion"
+      >
+        Catalogo
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    @apply border-white border-2;
+  }
+
+  section > img:nth-child(1) {
+    animation: parallax-img1 1s linear forwards;
+    view-timeline: --appears block 30% auto;
+    animation-timeline: --appears;
+  }
+
+  section > img:nth-child(2) {
+    animation: parallax-img2 1s linear forwards;
+    view-timeline: --appears block 30% auto;
+    animation-timeline: --appears;
+  }
+
+  section > img:nth-child(3) {
+    animation: parallax-img3 1s linear forwards;
+    view-timeline: --appears block 30% auto;
+    animation-timeline: --appears;
+  }
+
+  section > img:nth-child(4) {
+    animation: parallax-img4 1s linear forwards;
+    view-timeline: --appears block 30% auto;
+    animation-timeline: --appears;
+  }
+
+  @keyframes parallax-img1 {
+    to {
+      transform: translateY(100px) rotate(6deg) skewX(8deg);
+    }
+  }
+
+  @keyframes parallax-img2 {
+    to {
+      transform: translateY(100px) rotate(-3deg) skewX(8deg);
+    }
+  }
+
+  @keyframes parallax-img3 {
+    to {
+      transform: translateY(100px) rotate(-6deg) skewX(8deg);
+    }
+  }
+
+  @keyframes parallax-img4 {
+    to {
+      transform: translateY(100px) rotate(3deg) skewX(8deg);
+    }
+  }
+</style>
