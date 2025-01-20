@@ -1,31 +1,33 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from "astro-icon/components"
 ---
 
 <aside
-  class="fixed bottom-2 right-2 shadow-lg bg-[#25d366] rounded-full p-4 group hover:shadow-none transition-shadow z-50 text-white"
+  class="fixed bottom-2 right-2 shadow-lg bg-[#25d366] hover:bg-white rounded-full p-3 md:p-4 group hover:shadow-none transition-shadow z-50 text-white"
 >
   <article
-    class="w-96 absolute left-full bottom-0 opacity-0 transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-100 bg-gray-100 shadow-lg rounded-[2rem]"
+    class="md:w-96 w-80 absolute left-full bottom-0 opacity-0 transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-100 bg-gray-100 shadow-lg rounded-[2rem]"
   >
-    <header class="bg-[#25d366] p-4 rounded-t-[2rem]">
-      <Icon name="logos/whatsapp-logo" width="120" height="28"/>
+    <header class="bg-[#25d366] md:p-4 py-3 px-5 rounded-t-[2rem]">
+      <Icon name="logos/whatsapp-logo" class="md:w-[120px] h-auto w-[100px]" />
     </header>
-    <main class="flex flex-col gap-8 mx-8 my-4">
-      <div class="relative bg-white text-black rounded-3xl p-4 bubble drop-shadow-lg">
-        <span>Hola<br />¿En que podemos ayudarte?</span>
+    <main class="flex flex-col md:gap-8 gap-5 md:mx-8 mx-4 my-4">
+      <div
+        class="relative bg-white text-black rounded-3xl md:p-4 p-3 bubble drop-shadow-lg"
+      >
+        <span class="max-md:text-sm">Hola<br />¿En que podemos ayudarte?</span>
       </div>
       <a
-        href=""
+        href="https://wa.me/51935178423?text=Hola!%20me%20gustaría%20más%20información%20sobre%20sus%20servicios"
         target="_blank"
-        class="bg-[#25d366] flex w-fit p-2 rounded-full items-center text-gray-100 font-bold hover:bg-[#3ffc84] transition-colors pl-8 ml-auto"
+        class="bg-[#25d366] flex w-fit p-2 rounded-full items-center text-gray-100 font-bold hover:bg-[#3ffc84] transition-colors pl-4 md:pl-8 ml-auto max-md:text-sm"
       >
         Abrir chat
-        <Icon name="others/open-chat" size="48" class="ml-4"/>
+        <Icon name="others/open-chat" size="48" class="ml-4 size-8" />
       </a>
     </main>
   </article>
-  <Icon name="logos/whatsapp-icon" size="48" />
+  <Icon name="logos/whatsapp-icon" class="md:size-12 size-9" />
 </aside>
 
 <style>
@@ -43,5 +45,3 @@ import { Icon } from "astro-icon/components";
     );
   }
 </style>
-
-<!-- href="https://wa.me/51998267385?text=Hola%20me%20gustaría%20más%20información%20sobre%20sus%20servicios" -->
