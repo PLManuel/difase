@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components"
+---
+
+<section class="mt-20 flex max-md:flex-col mx-auto max-w-screen-lg md:pr-4">
+  <div class="flex flex-col justify-center md:px-8 px-3">
+    <h2 class="font-energy text-blue-900 text-3xl mb-5 max-md:text-center">
+      Te asesoramos y ofrecemos<br />
+      <strong
+        class="md:text-4xl text-3xl font-normal bg-clip-text text-transparent"
+        style="background-image: linear-gradient(45deg, #1e3a8a 5%, #3b82f6 10%, #2563eb 30%, #60a5fa 50%, #1d4ed8 70%, #3b82f6 80%, #1e40af 95%);"
+        >las mejores soluciones</strong
+      >
+    </h2>
+    <div
+      class="md:-skew-x-12 -skew-x-[8deg] lg:w-96 md:w-max w-80 max-md:mx-auto flex flex-col text-white max-md:text-sm"
+    >
+      <div class="border-b border-white h-20 bg-blue-950">
+        <div class="h-full skew-x-12 mx-5 flex items-center gap-5">
+          <Icon name="contact/mail" class="md:size-9 size-7" />
+          <div>
+            <h3 class="uppercase font-bold">Correo</h3>
+            <p class="text-blue-100">mlume@difase.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-white h-20 bg-blue-900">
+        <div class="h-full skew-x-12 mx-5 flex items-center gap-5">
+          <Icon name="contact/phone" class="md:size-9 size-7" />
+          <div>
+            <h3 class="uppercase font-bold">Telefono</h3>
+            <p class="text-blue-100">+51 935 178 423</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-white h-20 bg-blue-800">
+        <div class="h-full skew-x-12 mx-5 flex items-center gap-5">
+          <Icon name="contact/location" class="md:size-9 size-7" />
+          <div>
+            <h3 class="uppercase font-bold">Direccón</h3>
+            <p class="text-blue-100 md:text-sm text-xs">
+              Av. Pobladores California Mz H Lote 7<br />Villa el Salvador
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full max-md:p-3">
+    <iframe
+      class="max-w-full w-full md:h-96 h-80"
+      loading="lazy"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.622520634565!2d-76.97319472493632!3d-12.20606828804335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9863a1012ef%3A0xf045fe7c450c35fe!2sDifase%20Machinery%20SAC!5e0!3m2!1ses!2spe!4v1737261009063!5m2!1ses!2spe"
+      title="Av. Pobladores California Mz H Lote 7, Villa el Salvador"
+      aria-label="Av. Pobladores California Mz H Lote 7, Villa el Salvador"
+    >
+    </iframe>
+  </div>
+</section>
