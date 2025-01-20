@@ -1,23 +1,22 @@
----
----
-<section class="max-w-screen-lg mx-auto mt-10">
+<section class="max-w-screen-lg mx-auto mt-10 p-4">
   <h2
-    class="font-energy tracking-wide text-6xl text-center uppercase text-blue-900"
+    class="font-energy tracking-wide text-4xl md:text-6xl text-center uppercase text-blue-900"
   >
     ¿Quienes somos?
   </h2>
-  <p class="max-w-screen-sm mx-auto mt-3 text-center">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima ad
-    incidunt ipsa expedita, laborum praesentium ratione doloribus esse eius
-    aspernatur quidem voluptatum numquam. Dolores aspernatur est eos error,
-    sed deleniti!
+  <p class="max-w-screen-sm mx-auto mt-3 text-center max-sm:text-sm">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima ad incidunt
+    ipsa expedita, laborum praesentium ratione doloribus esse eius aspernatur
+    quidem voluptatum numquam. Dolores aspernatur est eos error, sed deleniti!
   </p>
-  <div class="mt-10 flex justify-center gap-5">
+  <div
+    class="md:mt-10 mt-5 flex max-md:flex-wrap justify-center md:gap-5 gap-2 max-md:items-center px-2"
+  >
     <div class="drop-shadow-xl">
       <img
         src="images/inicio/quienes-somos-1.webp"
         alt=""
-        class="object-cover w-52 h-72"
+        class="object-cover w-52 h-72 max-[555px]:w-full max-[555px]:h-auto max-[555px]:object-center"
         style="clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%);"
       />
     </div>
@@ -25,20 +24,28 @@
       <img
         src="images/inicio/quienes-somos-2.webp"
         alt=""
-        class="object-cover h-[80%] w-80"
+        class="object-cover h-[80%] w-80 max-[555px]:w-full max-[555px]:h-auto max-[555px]:object-center"
       />
     </div>
-    <div class="drop-shadow-xl">
+    <div class="drop-shadow-xl max-md:order-first">
       <img
         src="images/inicio/quienes-somos-3.webp"
         alt=""
-        class="object-cover object-[-90px] w-52 h-72"
+        class="object-cover object-[-90px] w-52 h-72 max-[555px]:w-full max-[555px]:h-auto max-[555px]:object-center"
         style="clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0 80%);"
       />
     </div>
   </div>
   <button
-    class="border-blue-900 border-2 py-2 px-4 mx-auto block -mt-5 uppercase text-blue-950 -skew-x-12 hover:bg-blue-900 hover:text-white transition-all hover:px-7 duration-300 font-oblivion"
+    class="border-blue-900 max-md:text-sm border-2 py-2 px-4 mx-auto block md:-mt-5 mt-3 uppercase text-blue-950 -skew-x-12 hover:bg-blue-900 hover:text-white transition-all hover:px-7 duration-300 font-oblivion"
     >Conoce mas de Difase</button
   >
 </section>
+
+<style>
+  @media (max-width: 768px) {
+    img {
+      clip-path: none !important;
+    }
+  }
+</style>
