@@ -1,38 +1,38 @@
 <section class="mt-20 text-white h-[40rem] flex items-center relative">
   <img
     src="images/inicio/catalogo-1.webp"
-    class="w-52 absolute skew-x-6 -top-32 z-10 left-28 rotate-6"
+    class="xl:w-52 lg:w-48 md:w-44 sm:w-40 w-32 max-[500px]:w-28 lg:-top-44 md:-top-40 sm:-top-32 -top-20 z-10 xl:left-16 md:left-12 sm:left-10 left-6 rotate-6"
     alt=""
   />
   <img
     src="images/inicio/catalogo-2.webp"
-    class="w-72 absolute skew-x-6 -top-10 z-10 right-14 -rotate-3"
+    class="xl:w-72 lg:w-[17rem] md:w-60 sm:w-52 w-44 max-[500px]:w-40 sm:-top-20 -top-10 z-10 md:right-14 right-10 -rotate-3"
     alt=""
   />
   <img
     src="images/inicio/catalogo-3.webp"
-    class="w-72 absolute skew-x-6 bottom-24 z-10 left-44 -rotate-6"
+    class="xl:w-72 lg:w-[17rem] md:w-60 sm:w-52 w-44 max-[500px]:w-36 md:bottom-24 bottom-36 z-10 xl:left-36 lg:left-24 left-7 -rotate-6"
     alt=""
   />
   <img
     src="images/inicio/catalogo-4.webp"
-    class="w-72 absolute skew-x-6 bottom-14 z-10 right-40 rotate-3"
+    class="xl:w-72 lg:w-[17rem] md:w-60 sm:w-52 w-44 max-[500px]:w-36 md:bottom-14 bottom-28 z-10 xl:right-36 lg:right-24 right-7 rotate-3"
     alt=""
   />
   <div
     class="bg-blue-950 h-[30rem] skew-y-[8deg] w-full flex items-center justify-center"
   >
-    <div class="-skew-y-[8deg] max-w-screen-sm text-center">
-      <h2 class="font-energy text-5xl uppercase mb-2">
+    <div class="-skew-y-[8deg] max-w-screen-sm text-center px-2">
+      <h2 class="font-energy md:text-5xl text-3xl uppercase mb-2">
         Descubra nuestro catalogo
       </h2>
-      <p class="mx-10">
+      <p class="md:mx-10 mx-12 max-md:text-sm">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod enim odit
         cumque saepe non perspiciatis sequi beatae! Quae, reprehenderit
         deleniti.
       </p>
       <button
-        class="border-white border-2 py-2 px-4 mx-auto block mt-10 uppercase -skew-x-12 bg-blue-900 text-white tracking-widest transition-all hover:px-7 duration-300 font-oblivion"
+        class="border-white border-2 py-2 px-4 mx-auto block md:mt-10 mt-5 uppercase -skew-x-12 bg-blue-900 text-white md:tracking-widest tracking-wider max-md:text-sm transition-all hover:px-7 duration-300 font-oblivion"
       >
         Catalogo
       </button>
@@ -42,7 +42,7 @@
 
 <style>
   img {
-    @apply border-white border-2;
+    @apply border-white border-2 absolute;
   }
 
   section > img:nth-child(1) {
@@ -71,25 +71,25 @@
 
   @keyframes parallax-img1 {
     to {
-      transform: translateY(100px) rotate(6deg) skewX(8deg);
+      transform: translateY(100px) rotate(-6deg);
     }
   }
 
   @keyframes parallax-img2 {
     to {
-      transform: translateY(100px) rotate(-3deg) skewX(8deg);
+      transform: translateY(100px) rotate(3deg);
     }
   }
 
   @keyframes parallax-img3 {
     to {
-      transform: translateY(100px) rotate(-6deg) skewX(8deg);
+      transform: translateY(100px) rotate(6deg);
     }
   }
 
   @keyframes parallax-img4 {
     to {
-      transform: translateY(100px) rotate(3deg) skewX(8deg);
+      transform: translateY(100px) rotate(-3deg);
     }
   }
 </style>
