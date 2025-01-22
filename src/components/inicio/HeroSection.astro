@@ -1,7 +1,7 @@
-<section class="relative w-full h-dvh bg-black lg:bg-blue-500">
+<section class="relative w-full h-dvh md:bg-blue-500 bg-black">
   <img
     src="images/inicio/temp/hero.png"
-    class="w-full h-dvh object-cover hero-bg max-lg:opacity-50"
+    class="w-full h-dvh object-cover object-center max-md:opacity-60"
     alt=""
     style="mask-image: linear-gradient(
       100deg,
@@ -9,19 +9,20 @@
       rgb(0, 0, 0) 60%
     );"
   />
-  <article
-    class="absolute inset-0 flex flex-col justify-center px-32 text-white"
-  >
-    <div class="max-w-[30rem] mt-14">
-      <h2 class="font-energy uppercase text-7xl tracking-widest">
-        Difase Machinery
+  <article class="absolute inset-0 flex flex-col justify-center text-white">
+    <div class="w-fit mt-14 xl:ml-24 ml-8 max-md:mx-auto px-4">
+      <h2 class="font-energy uppercase text-5xl md:text-7xl max-md:text-center tracking-widest">
+        Difase<br />Machinery
       </h2>
-      <span class="uppercase italic flex items-end gap-2 tracking-wide">
+      <span
+        class="uppercase italic block md:tracking-wide max-md:text-sm"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-0.5 -0.5 24 24"
           height="32"
           width="32"
+          class="inline-block"
         >
           <path
             fill="#ffff"
@@ -31,7 +32,7 @@
         proveedores de maquinaria industrial
       </span>
       <button
-        class="bg-blue-800 p-3 uppercase font-oblivion mt-5 border overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-indigo-900 flex items-center gap-2 w-40 hover:w-auto hover:translate-x-2 group"
+        class="bg-blue-800 p-3 uppercase font-oblivion mt-5 border overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-blue-950 flex items-center gap-2 w-36 md:w-40 hover:w-auto hover:translate-x-2 group max-md:text-sm max-md:mx-auto"
         style="interpolate-size: allow-keywords;"
       >
         <span>Catalogo</span>
@@ -51,13 +52,3 @@
     </div>
   </article>
 </section>
-
-<style>
-  .hero-bg {
-    mask-image: linear-gradient(
-      100deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgb(0, 0, 0) 60%
-    );
-  }
-</style>
