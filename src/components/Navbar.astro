@@ -1,12 +1,22 @@
 ---
-interface Props {
-  isIndex?: boolean
-}
-
-const { isIndex = false } = Astro.props
-
 import { Icon } from "astro-icon/components"
 import Modal from "./Modal.astro"
+
+interface Props {
+  inicio?: boolean
+  nosotros?: boolean
+  catalogo?: boolean
+  servicios?: boolean
+  contactanos?: boolean
+}
+
+const {
+  inicio = false,
+  nosotros = false,
+  catalogo = false,
+  servicios = false,
+  contactanos = false,
+} = Astro.props
 ---
 
 <header class="flex flex-col fixed top-0 w-full z-50">
@@ -48,14 +58,17 @@ import Modal from "./Modal.astro"
     </Modal>
   </aside>
   <section
-    class=`backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center relative ${isIndex ? "text-white" : "text-blue-950"}`
+    class=`backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center relative ${inicio ? "text-white" : "text-blue-950"}`
   >
     <a href="/" class="flex items-center gap-2">
       <img src="isotipo.svg" class="w-8 lg:w-12" alt="" />
       <img src="logotipo.svg" class="w-24 lg:w-32" alt="" />
     </a>
     <input type="checkbox" class="peer hidden" id="navbar-open" />
-    <label class="w-8 md:hidden block absolute top-[.8rem] right-1 cursor-pointer" for="navbar-open">
+    <label
+      class="w-8 md:hidden block absolute top-[.8rem] right-1 cursor-pointer"
+      for="navbar-open"
+    >
       <span class="sr-only">boton de menú</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +78,6 @@ import Modal from "./Modal.astro"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class=""
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M4 6h16"></path>
@@ -79,11 +91,31 @@ import Modal from "./Modal.astro"
       <ul
         class="flex max-md:flex-col md:gap-2 max-md:text-base max-lg:text-sm max-md:mt-4 font-semibold"
       >
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/nosotros">Nosotros</a></li>
-        <li><a href="/catalogo">Catalogo</a></li>
-        <li><a href="/servicios">Servicios</a></li>
-        <li><a href="/contactanos">Contactanos</a></li>
+        <li>
+          <a
+            class=`${inicio ? "decoration-inherit" : "decoration-transparent hover:decoration-inherit"}`
+            href="/">Inicio</a>
+        </li>
+        <li>
+          <a
+            class=`${nosotros ? "decoration-inherit" : "decoration-transparent hover:decoration-inherit"}`
+            href="/nosotros">Nosotros</a>
+        </li>
+        <li>
+          <a
+            class=`${catalogo ? "decoration-inherit" : "decoration-transparent hover:decoration-inherit"}`
+            href="/catalogo">Catalogo</a>
+        </li>
+        <li>
+          <a
+            class=`${servicios ? "decoration-inherit" : "decoration-transparent hover:decoration-inherit"}`
+            href="/servicios">Servicios</a>
+        </li>
+        <li>
+          <a
+            class=`${contactanos ? "decoration-inherit" : "decoration-transparent hover:decoration-inherit"}`
+            href="/contactanos">Contactanos</a>
+        </li>
       </ul>
     </nav>
     <div class="flex items-center gap-2">
@@ -128,9 +160,9 @@ import Modal from "./Modal.astro"
 
     > nav {
       interpolate-size: allow-keywords;
-      
+
       a {
-        @apply block py-3 lg:px-6 md:px-2 px-1 relative underline decoration-transparent hover:decoration-inherit transition-colors duration-300 underline-offset-8;
+        @apply block py-3 lg:px-6 md:px-2 px-1 relative underline transition-colors duration-300 underline-offset-8;
       }
     }
   }

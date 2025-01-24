@@ -1,6 +1,5 @@
 ---
 import { ClientRouter } from "astro:transitions"
-
 import Navbar from "@/components/Navbar.astro"
 import WhatsappButton from "@/components/WhatsappButton.astro"
 import Footer from "@/components/Footer.astro"
@@ -8,9 +7,20 @@ import Footer from "@/components/Footer.astro"
 interface Props {
   title: string
   isIndex?: boolean
+  isNosotros?: boolean
+  isCatalogo?: boolean
+  isServicios?: boolean
+  isContactanos?: boolean
 }
 
-const { title, isIndex = false } = Astro.props
+const {
+  title,
+  isIndex = false,
+  isNosotros = false,
+  isCatalogo = false,
+  isServicios = false,
+  isContactanos = false,
+} = Astro.props
 const pageTitle = isIndex ? title : `Difase | ${title}`
 ---
 
@@ -28,7 +38,13 @@ const pageTitle = isIndex ? title : `Difase | ${title}`
     <ClientRouter />
   </head>
   <body class="font-quicksand">
-    <Navbar isIndex={isIndex} />
+    <Navbar
+      inicio={isIndex}
+      nosotros={isNosotros}
+      catalogo={isCatalogo}
+      servicios={isServicios}
+      contactanos={isContactanos}
+    />
     <WhatsappButton />
     <main>
       <slot />
@@ -39,7 +55,7 @@ const pageTitle = isIndex ? title : `Difase | ${title}`
 
 <style is:global>
   :root {
-    --pagefind-ui-scale: .8;
+    --pagefind-ui-scale: 0.8;
     --pagefind-ui-primary: #034ad8;
     --pagefind-ui-text: #393939;
     --pagefind-ui-background: #ffffff;
