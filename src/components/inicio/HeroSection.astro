@@ -3,20 +3,15 @@
     src="images/inicio/temp/hero.png"
     class="w-full h-dvh object-cover object-center max-md:opacity-60"
     alt=""
-    style="mask-image: linear-gradient(
-      100deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgb(0, 0, 0) 60%
-    );"
   />
   <article class="absolute inset-0 flex flex-col justify-center text-white">
     <div class="w-fit mt-14 xl:ml-24 ml-8 max-md:mx-auto px-4">
-      <h2 class="font-energy uppercase text-5xl md:text-7xl max-md:text-center tracking-widest">
+      <h2
+        class="font-energy uppercase text-5xl md:text-7xl max-md:text-center tracking-widest"
+      >
         Difase<br />Machinery
       </h2>
-      <span
-        class="uppercase italic block md:tracking-wide max-md:text-sm"
-      >
+      <span class="uppercase italic block md:tracking-wide max-md:text-sm">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-0.5 -0.5 24 24"
@@ -33,7 +28,6 @@
       </span>
       <button
         class="bg-blue-800 p-3 uppercase font-oblivion mt-5 border overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-blue-950 flex items-center gap-2 w-36 md:w-40 hover:w-auto hover:translate-x-2 group max-md:text-sm max-md:mx-auto"
-        style="interpolate-size: allow-keywords;"
       >
         <span>Catalogo</span>
         <svg
@@ -52,3 +46,16 @@
     </div>
   </article>
 </section>
+
+<style>
+  img {
+    mask-image: linear-gradient(
+      100deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgb(0, 0, 0) 60%
+    );
+  }
+  button {
+    interpolate-size: allow-keywords;
+  }
+</style>

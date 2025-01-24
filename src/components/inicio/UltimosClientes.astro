@@ -12,9 +12,15 @@ const images = [
 
 <section class="overflow-x-hidden">
   <div class="max-w-[1200px] mx-auto mt-20 px-7">
-    <div class="md:skew-x-[30deg] skew-x-[20deg] w-full sm:w-fit md:h-[72px] h-16">
-      <div class="bg-blue-900 flex items-center justify-center md:px-8 sm:px-6 px-0 h-full">
-        <h2 class="font-energy md:skew-x-[-30deg] skew-x-[-20deg] text-xl sm:text-2xl md:text-4xl uppercase text-white max-sm:tracking-wider">
+    <div
+      class="md:skew-x-[30deg] skew-x-[20deg] w-full sm:w-fit md:h-[72px] h-16"
+    >
+      <div
+        class="bg-blue-900 flex items-center justify-center md:px-8 sm:px-6 px-0 h-full"
+      >
+        <h2
+          class="font-energy md:skew-x-[-30deg] skew-x-[-20deg] text-xl sm:text-2xl md:text-4xl uppercase text-white max-sm:tracking-wider"
+        >
           Nuestros ultimos clientes
         </h2>
       </div>
@@ -42,48 +48,3 @@ const images = [
     </div>
   </div>
 </section>
-
-<script>
-  const swiperMarquee = document.querySelector("#swiper-marquee")
-
-  const swiperMarqueeParams = {
-    loop: true,
-    speed: 5000,
-    allowTouchMove: false,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-      },
-      480: {
-        slidesPerView: 2,
-      },
-      640: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-    injectStyles: [
-      `
-      .swiper-wrapper {
-        transition-timing-function: linear !important;
-      }
-    `,
-    ],
-    on: {
-      init() {},
-    },
-  }
-  // @ts-ignore
-  Object.assign(swiperMarquee, swiperMarqueeParams)
-  // @ts-ignore
-  swiperMarquee.initialize()
-</script>

@@ -5,7 +5,7 @@ import Modal from "./Modal.astro"
 
 <header class="flex flex-col fixed top-0 w-full z-50">
   <aside
-    class="h-14 flex justify-between items-center sm:px-4 px-2 header-top overflow-hidden sm:gap-10 gap-5"
+    class="h-14 flex justify-between items-center sm:px-4 px-2 overflow-hidden sm:gap-10 gap-5"
   >
     <section class="flex gap-2 sm:gap-4 md:gap-5 mr-2 text-blue-950">
       <div
@@ -18,16 +18,16 @@ import Modal from "./Modal.astro"
           años contigo
         </strong>
       </div>
-      <a href="">
+      <a href="/">
         <Icon name="logos/facebook-icon" class="size-8 sm:size-9 md:size-10" />
       </a>
-      <a href="">
+      <a href="/">
         <Icon name="logos/instagram-icon" class="size-8 sm:size-9 md:size-10" />
       </a>
-      <a href="">
+      <a href="/">
         <Icon name="logos/x-icon" class="size-8 sm:size-9 md:size-10" />
       </a>
-      <a href="">
+      <a href="/">
         <Icon name="logos/youtube-icon" class="size-8 sm:size-9 md:size-10" />
       </a>
     </section>
@@ -42,71 +42,53 @@ import Modal from "./Modal.astro"
     </Modal>
   </aside>
   <section
-    class="nav-disafe text-white backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center"
+    class="text-white backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center relative"
   >
     <a href="/" class="flex items-center gap-2">
       <img src="isotipo.svg" class="w-8 lg:w-12" alt="" />
       <img src="logotipo.svg" class="w-24 lg:w-32" alt="" />
     </a>
+    <input type="checkbox" class="peer hidden" id="navbar-open" />
+    <label class="w-8 md:hidden block absolute top-[.8rem] right-1 cursor-pointer" for="navbar-open">
+      <span class="sr-only">boton de menú</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class=""
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6h16"></path>
+        <path d="M7 12h13"></path>
+        <path d="M10 18h10"></path>
+      </svg>
+    </label>
     <nav
-      class="max-md:order-last max-md:w-full overflow-hidden transition-all max-md:max-h-0 duration-300 ease-in-out max-md:text-center"
+      class="max-md:order-last max-md:w-full overflow-hidden transition-all peer-checked:max-h-max max-md:max-h-0 duration-300 ease-in-out max-md:text-center"
     >
       <ul
-        class="flex max-md:flex-col md:gap-2 max-md:text-base max-lg:text-sm max-md:mt-4"
+        class="flex max-md:flex-col md:gap-2 max-md:text-base max-lg:text-sm max-md:mt-4 font-semibold"
       >
-        <li>
-          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Inicio</a>
-        </li>
-        <li>
-          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Nosotros</a>
-        </li>
-        <li>
-          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Catalogo</a>
-        </li>
-        <li>
-          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Servicio</a>
-        </li>
-        <li>
-          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Contactanos</a>
-        </li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/catalogo">Catalogo</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/contactanos">Contactanos</a></li>
       </ul>
     </nav>
     <div class="flex items-center gap-2">
       <button
-        class="bg-gradient-to-tl border from-indigo-700 via-blue-600 to-indigo-700 text-white uppercase font-oblivion tracking-[0.2em] md:text-xs text-[.7rem] md:px-4 md:py-3 p-2"
+        class="bg-gradient-to-tl border from-indigo-700 via-blue-600 to-indigo-700 text-white uppercase font-oblivion tracking-[0.2em] md:text-xs text-[.7rem] md:px-4 md:py-3 p-2 max-md:mr-7"
       >
         Cotizar
-      </button>
-      <button class="toggle-nav">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="w-7 md:cursor-pointer md:hidden block"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M4 6h16"></path>
-          <path d="M7 12h13"></path>
-          <path d="M10 18h10"></path>
-        </svg>
       </button>
     </div>
   </section>
 </header>
-
-<script>
-  const nav = document.querySelector("nav")
-  const toggleNav = document.querySelector(".toggle-nav")
-
-  toggleNav?.addEventListener("click", () => {
-    nav?.classList.toggle("max-h-max")
-    nav?.classList.toggle("max-md:max-h-0")
-  })
-</script>
 
 <style>
   aside {
@@ -120,39 +102,42 @@ import Modal from "./Modal.astro"
       #fff 80%,
       #bbb 95%
     );
-  }
-
-  aside > section > a {
-    @apply self-center hover:text-blue-900 transition-colors duration-300;
-  }
-
-  .header-top {
-    transition: all 0.3s ease;
+    transition-property: height;
+    transition-duration: 300ms;
     animation: hidden-header-top linear both;
     animation-timeline: scroll();
     animation-range: 0 5rem;
+
+    > section > a {
+      @apply self-center hover:text-blue-900 transition-colors duration-300;
+    }
   }
 
-  .nav-disafe {
-    transition: all 0.3s ease;
+  header > section {
+    transition-property: color, background-color;
+    transition-duration: 300ms;
     animation: enhance-nav linear both;
     animation-timeline: scroll();
     animation-range: 0 5rem;
+
+    > nav {
+      interpolate-size: allow-keywords;
+      
+      a {
+        @apply block py-3 lg:px-6 md:px-2 px-1 relative underline decoration-transparent hover:decoration-inherit transition-colors duration-300 underline-offset-8;
+      }
+    }
   }
 
   @keyframes hidden-header-top {
     to {
-      height: 0;
+      @apply h-0;
     }
   }
 
   @keyframes enhance-nav {
     to {
-      color: black;
-      background-color: rgba(255, 255, 255, 0.9);
+      @apply text-blue-950 bg-white/90;
     }
-  }
-  nav {
-    interpolate-size: allow-keywords;
   }
 </style>

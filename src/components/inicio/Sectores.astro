@@ -5,14 +5,9 @@ import SlideSectores from "./SlideSectores.astro"
 <section class="bg-blue-900 py-14 mt-20 text-white">
   <div class="max-w-[1100px] mx-auto flex max-md:flex-col gap-2 px-2">
     <div class="flex items-center justify-center">
-      <h2
-        class="font-energy text-5xl lg:text-6xl uppercase text-center"
-      >
+      <h2 class="font-energy text-5xl lg:text-6xl uppercase text-center">
         soluciones<br />para cada<br />
-        <strong
-          class="tracking-wider bg-clip-text text-transparent"
-          style="background-image: linear-gradient(45deg,#ccc 5%,#fff 10%,#ccc 30%,#ddd 50%,#ccc 70%,#fff 80%,#bbb 95%);"
-        >
+        <strong class="tracking-wider bg-clip-text text-transparent">
           sector
         </strong>
       </h2>
@@ -27,36 +22,17 @@ import SlideSectores from "./SlideSectores.astro"
   </div>
 </section>
 
-<script>
-  const swiperSectores = document.querySelector("#swiper-sectores")
-
-  const swiperSectoresParams = {
-    loop: true,
-    speed: 1000,
-    spaceBetween: 10,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      480: {
-        slidesPerView: 1,
-      },
-      640: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-    on: {
-      init() {},
-    },
+<style>
+  strong {
+    background-image: linear-gradient(
+      45deg,
+      #ccc 5%,
+      #fff 10%,
+      #ccc 30%,
+      #ddd 50%,
+      #ccc 70%,
+      #fff 80%,
+      #bbb 95%
+    );
   }
-  // @ts-ignore
-  Object.assign(swiperSectores, swiperSectoresParams)
-  // @ts-ignore
-  swiperSectores.initialize()
-</script>
+</style>

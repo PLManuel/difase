@@ -3,10 +3,10 @@ interface Props {
   size?: "2xl" | "xl" | "lg" | "md" | "sm"
 }
 
-const { size = "md" } = Astro.props;
+const { size = "md" } = Astro.props
 ---
 
-<div 
+<div
   class="gap-3 bg-white/50 flex items-center sm:py-2 sm:px-3 p-1 border border-blue-950 sm:cursor-text cursor-pointer w-full max-w-80 max-sm:w-auto"
 >
   <svg
@@ -31,98 +31,38 @@ const { size = "md" } = Astro.props;
 <dialog
   class={`modal max-w-screen-${size} w-auto rounded-lg shadow-md overflow-hidden bg-transparent`}
 >
-<div class="mx-2 bg-white rounded-sm p-2">
-  <main class="modal-content bg-white">
-    <slot />
-  </main>
-  <button
-    class="btn-close mt-4 ml-auto px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 block"
-    >Cerrar</button
-  >
-</div>
+  <div class="mx-2 bg-white rounded-sm p-2">
+    <main class="modal-content bg-white">
+      <slot />
+    </main>
+    <button
+      class="btn-close mt-4 ml-auto px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 block"
+      >Cerrar</button
+    >
+  </div>
 </dialog>
 
 <script>
-  const openInput = document.querySelector('.input-open') as HTMLInputElement;
-  const modal = document.querySelector('dialog');
-  const closeButton = document.querySelector('.btn-close');
-  const triggerDiv = document.querySelector('div.gap-3');
+  document.addEventListener("astro:page-load", () => {
+    const openInput = document.querySelector(".input-open") as HTMLInputElement
+    const modal = document.querySelector("dialog")
+    const closeButton = document.querySelector(".btn-close")
+    const triggerDiv = document.querySelector("div.gap-3")
 
-  if (openInput && modal && closeButton && triggerDiv) {
-    triggerDiv.addEventListener('click', (event) => {
-      event.preventDefault();
-      openInput.blur();
-      modal.showModal();
-    });
+    if (openInput && modal && closeButton && triggerDiv) {
+      triggerDiv.addEventListener("click", (event) => {
+        event.preventDefault()
+        openInput.blur()
+        modal.showModal()
+      })
 
-    closeButton.addEventListener('click', () => modal.close());
+      closeButton.addEventListener("click", () => modal.close())
 
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.close();
-      }
-    });
-  }
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.close()
+        }
+      })
+    }
+  })
 </script>
-
-<!-- ---
-interface Props {
-  size?: "2xl" | "xl" | "lg" | "md" | "sm"
-}
-
-const { size = "md" } = Astro.props
----
-
-<div class="bg-white flex items-center gap-2 py-2 pl-3 border border-blue-950">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="w-7 text-blue-900"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path
-      d="M21 21l-6 -6"></path></svg
-  >
-  <input
-    type="text"
-    class="input-open outline-none"
-    placeholder="Busca en la pagina ..."
-  />
-</div>
-<dialog
-  class={`modal max-w-screen-${size} w-full p-4 bg-white rounded-lg shadow-md overflow-hidden`}
->
-  <main class="modal-content">
-    <slot />
-  </main>
-  <button
-    class="btn-close mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-    >Cerrar</button
-  >
-</dialog>
-
-<script>
-  const openInput = document.querySelector('.input-open') as HTMLInputElement;
-  const modal = document.querySelector('dialog');
-  const closeButton = document.querySelector('.btn-close');
-
-  if (openInput && modal && closeButton) {
-    openInput.addEventListener('click', (event) => {
-      event.preventDefault();
-      openInput.blur();
-      modal.showModal();
-    });
-
-    closeButton.addEventListener('click', () => modal.close());
-
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.close();
-      }
-    });
-  }
-</script> -->
