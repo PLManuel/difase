@@ -28,7 +28,7 @@ const pageTitle = isIndex ? title : `Difase | ${title}`
     <ClientRouter />
   </head>
   <body class="font-quicksand">
-    <Navbar />
+    <Navbar isIndex={isIndex} />
     <WhatsappButton />
     <main>
       <slot />

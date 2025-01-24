@@ -1,4 +1,10 @@
 ---
+interface Props {
+  isIndex?: boolean
+}
+
+const { isIndex = false } = Astro.props
+
 import { Icon } from "astro-icon/components"
 import Modal from "./Modal.astro"
 ---
@@ -42,7 +48,7 @@ import Modal from "./Modal.astro"
     </Modal>
   </aside>
   <section
-    class="text-white backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center relative"
+    class=`backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center relative ${isIndex ? "text-white" : "text-blue-950"}`
   >
     <a href="/" class="flex items-center gap-2">
       <img src="isotipo.svg" class="w-8 lg:w-12" alt="" />
