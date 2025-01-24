@@ -37,7 +37,7 @@ import Modal from "./Modal.astro"
         window.addEventListener("DOMContentLoaded", (event) => {
           // @ts-ignore
           new PagefindUI({ element: "#search", showSubResults: true })
-        });
+        })
       </script>
     </Modal>
   </aside>
@@ -48,22 +48,26 @@ import Modal from "./Modal.astro"
       <img src="isotipo.svg" class="w-8 lg:w-12" alt="" />
       <img src="logotipo.svg" class="w-24 lg:w-32" alt="" />
     </a>
-    <nav class="max-md:order-last max-md:w-full overflow-hidden transition-[max-height] max-md:max-h-0 duration-300 ease-in-out max-md:text-center">
-      <ul class="flex max-md:flex-col gap-2 max-lg:text-sm">
+    <nav
+      class="max-md:order-last max-md:w-full overflow-hidden transition-all max-md:max-h-0 duration-300 ease-in-out max-md:text-center"
+    >
+      <ul
+        class="flex max-md:flex-col md:gap-2 max-md:text-base max-lg:text-sm max-md:mt-4"
+      >
         <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Inicio</a>
+          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Inicio</a>
         </li>
         <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Nosotros</a>
+          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Nosotros</a>
         </li>
         <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Catalogo</a>
+          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Catalogo</a>
         </li>
         <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Servicio</a>
+          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Servicio</a>
         </li>
         <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Contactanos</a>
+          <a class="block py-3 lg:px-6 md:px-2 px-1" href="/">Contactanos</a>
         </li>
       </ul>
     </nav>
@@ -95,102 +99,14 @@ import Modal from "./Modal.astro"
 </header>
 
 <script>
-    const nav = document.querySelector("nav");
-    const toggleNav = document.querySelector(".toggle-nav");
+  const nav = document.querySelector("nav")
+  const toggleNav = document.querySelector(".toggle-nav")
 
-    toggleNav?.addEventListener("click", () => {
-      nav?.classList.toggle("max-h-max");
-      nav?.classList.toggle("max-md:max-h-0");
-    });
+  toggleNav?.addEventListener("click", () => {
+    nav?.classList.toggle("max-h-max")
+    nav?.classList.toggle("max-md:max-h-0")
+  })
 </script>
-
-
-<!-- <header class="flex flex-col fixed top-0 w-full z-50">
-  <aside
-    class="h-14 flex justify-between items-center sm:px-4 px-2 header-top overflow-hidden sm:gap-10 gap-5"
-  >
-    <section class="flex gap-2 sm:gap-4 md:gap-5 mr-2 text-blue-950">
-      <div
-        class="flex items-center max-[500px]:text-sm text-base sm:text-lg md:text-xl"
-      >
-        <strong
-          class="uppercase text-center font-oblivion tracking-widest max-[500px]:w-28 w-32 sm:w-32 md:w-36 text-blue-800 leading-5"
-        >
-          <span class="font-bold tracking-tighter text-[1.7rem]"> 12 </span>
-          años contigo
-        </strong>
-      </div>
-      <a href="">
-        <Icon name="logos/facebook-icon" class="size-8 sm:size-9 md:size-10" />
-      </a>
-      <a href="">
-        <Icon name="logos/instagram-icon" class="size-8 sm:size-9 md:size-10" />
-      </a>
-      <a href="">
-        <Icon name="logos/x-icon" class="size-8 sm:size-9 md:size-10" />
-      </a>
-      <a href="">
-        <Icon name="logos/youtube-icon" class="size-8 sm:size-9 md:size-10" />
-      </a>
-    </section>
-    <Modal size="lg">
-      <div id="search" transition:persist></div>
-      <script>
-        window.addEventListener("DOMContentLoaded", (event) => {
-          // @ts-ignore
-          new PagefindUI({ element: "#search", showSubResults: true })
-        })
-      </script>
-    </Modal>
-  </aside>
-  <section
-    class="nav-disafe text-white backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center"
-  >
-    <a href="/" class="flex items-center gap-2">
-      <img src="isotipo.svg" class="w-8 lg:w-12" alt="" />
-      <img src="logotipo.svg" class="w-24 lg:w-32" alt="" />
-    </a>
-    <nav class="max-md:order-last max-md:w-full max-md:max-h-0 overflow-hidden">
-      <ul class="flex max-md:flex-col gap-2 max-lg:text-sm">
-        <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Inicio</a>
-        </li>
-        <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Nosotros</a>
-        </li>
-        <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Catalogo</a>
-        </li>
-        <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Servicio</a>
-        </li>
-        <li>
-          <a class="py-3 lg:px-6 md:px-2 px-1" href="/">Contactanos</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="flex items-center gap-2">
-      <button
-        class="bg-gradient-to-tl border from-indigo-700 via-blue-600 to-indigo-700 text-white uppercase font-oblivion tracking-[0.2em] md:text-xs text-[.7rem] md:px-4 md:py-3 p-2"
-      >
-        Cotizar
-      </button>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="w-7"
-        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-          d="M4 6h16"></path><path d="M7 12h13"></path><path d="M10 18h10"
-        ></path></svg
-      >
-    </div>
-  </section>
-</header> -->
 
 <style>
   aside {
@@ -236,177 +152,7 @@ import Modal from "./Modal.astro"
       background-color: rgba(255, 255, 255, 0.9);
     }
   }
-</style>
-
-<!-- ---
-import { Icon } from "astro-icon/components"
----
-
-<header
-  class="fixed top-0 z-50 bg-white/20 w-full backdrop-blur-sm flex header-difase shadow-md"
->
-  <section class="w-36 overflow-hidden py-2 px-7 logo-difase mr-5">
-    <a href="/" class="flex flex-col justify-center items-center gap-2">
-      <Icon name="isotipo" class="w-20 h-auto aspect-square max-w-full" />
-      <Icon name="logotipo" class="logotipo-difase w-full aspect-[73/14]" />
-    </a>
-  </section>
-  <section class="flex flex-col w-full">
-    <div
-      class="h-14 header-top flex justify-end"
-      style="clip-path: polygon(3% 0, 100% 0, 100% 100%, 0 100%); background: linear-gradient(
-        45deg,
-        #ccc 5%,
-        #fff 10%,
-        #ccc 30%,
-        #ddd 50%,
-        #ccc 70%,
-        #fff 80%,
-        #bbb 95%
-      );"
-    >
-      <section class="flex gap-7 redes-sociales">
-        <a href="">
-          <Icon name="logos/facebook-icon" class="w-9 h-14" />
-        </a>
-        <a href="">
-          <Icon name="logos/instagram-icon" class="w-9 h-14" />
-        </a>
-        <a href="">
-          <Icon name="logos/x-icon" class="w-9 h-14" />
-        </a>
-        <a href="">
-          <Icon name="logos/youtube-icon" class="w-9 h-14" />
-        </a>
-      </section>
-      <div
-        class="px-7 leading-[.5rem] flex items-center text-xl font-oblivion tracking-widest"
-      >
-        <strong class="uppercase text-center w-36 text-blue-800 h-full">
-          <span
-            class="font-bold tracking-tighter"
-            style="font-size: 1.7rem; line-height: 2rem;"
-          >
-            12
-          </span>
-          años contigo
-        </strong>
-      </div>
-    </div>
-    <div class="flex-1 flex items-center px-7">
-      <nav class="flex-1 flex justify-center nav-disafe text-white h-full">
-        <ul class="flex">
-          <li>
-            <a href="/">Inicio</a>
-          </li>
-          <li>
-            <a href="/">Nosotros</a>
-          </li>
-          <li>
-            <a href="/">Catalogo</a>
-          </li>
-          <li>
-            <a href="/">Servicio</a>
-          </li>
-          <li>
-            <a href="/">Contactanos</a>
-          </li>
-        </ul>
-      </nav>
-      <section>
-        <button class="bg-gradient-to-tl border from-indigo-700 via-blue-600 to-indigo-700 h-12 text-white uppercase font-oblivion tracking-[0.2em] px-3 rounded-lg text-xs" style="">Cotizar</button>
-      </section>
-    </div>
-  </section>
-</header>
-
-<style>
-  ul a {
-    @apply block h-full px-5 content-center hover:text-blue-950 font-medium transition-colors duration-300;
-  }
-
-  .redes-sociales a {
-    @apply hover:text-blue-800 text-blue-950 transition-colors duration-300;
-  }
-  .logo-difase {
-    transition: all 0.3s ease;
+  nav {
     interpolate-size: allow-keywords;
-    animation: enhance-logo linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 15rem;
   }
-
-  .header-difase {
-    animation: enhance-header linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 15rem;
-  }
-
-  .logotipo-difase {
-    transition: all 0.3s ease;
-    animation: hidden-logotipo linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 2rem;
-  }
-
-  .header-top {
-    transition: all 0.3s ease;
-    animation: hidden-header-top linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 3rem;
-  }
-
-  .corner {
-    transition: all 0.3s ease;
-    animation: enhance-corner linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 15rem;
-  }
-
-  .nav-disafe {
-    transition: all 0.3s ease;
-    animation: enhance-nav linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 3rem;
-  }
-
-  @keyframes enhance-header {
-    to {
-      background-color: rgba(255, 255, 255, 0.9);
-    }
-  }
-
-  @keyframes enhance-logo {
-    to {
-      width: 6.5rem;
-      height: 4rem;
-      margin-right: 0rem;
-    }
-  }
-
-  @keyframes hidden-logotipo {
-    to {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-
-  @keyframes hidden-header-top {
-    to {
-      height: 0;
-      clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
-    }
-  }
-
-  @keyframes enhance-corner {
-    to {
-      clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
-    }
-  }
-
-  @keyframes enhance-nav {
-    to {
-      color: black;
-    }
-  }
-</style> -->
+</style>
