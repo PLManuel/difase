@@ -1,11 +1,18 @@
 ---
+interface Props {
+  contactanos?: boolean
+}
+const {contactanos = "false"} = Astro.props
 import { Icon } from "astro-icon/components"
 import Contactanos from "./Contactanos.astro"
 ---
+{
+  !contactanos && (
+    <Contactanos />
+  )
+}
 
-<Contactanos />
-
-<footer class="mt-10 bg-[rgb(0,20,87)] relative text-white">
+<footer class="bg-[rgb(0,20,87)] relative text-white">
   <div id="footer-bg" class="inset-x-0 top-0 -z-30 bg-black/10"></div>
   <section
     class="flex max-md:flex-col max-md:gap-y-7 mb-5 px-5 pb-5 pt-10 justify-between max-w-screen-lg mx-auto relative z-10"
