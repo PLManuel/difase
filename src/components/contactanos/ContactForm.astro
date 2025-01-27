@@ -24,11 +24,12 @@
           <option value="otro">otro</option>
         </select>
       </fieldset>
-      <fieldset
-        class="sm:col-span-2 col-span-1 w-full flex flex-col gap-2"
-      >
+      <fieldset class="sm:col-span-2 col-span-1 w-full flex flex-col gap-2">
         <label for="">Comentario:</label>
-        <textarea class="border border-blue-700 disabled:bg-slate-100 outline-offset-0 focus:outline-2 focus:outline-blue-400 px-2 py-1 transition-all duration-100 outline-0 outline-none rounded-sm max-h-40 min-h-20 resize-none" name="comment" id=""></textarea>
+        <textarea
+          class="border border-blue-700 disabled:bg-slate-100 outline-offset-0 focus:outline-2 focus:outline-blue-400 px-2 py-1 transition-all duration-100 outline-0 outline-none rounded-sm max-h-40 min-h-20 resize-none"
+          name="comment"
+          id=""></textarea>
       </fieldset>
     </section>
     <button
@@ -44,19 +45,23 @@
   import { actions } from "astro:actions"
   import { navigate } from "astro:transitions/client"
 
-  const form = document.querySelector("form")
-  form?.addEventListener("submit", async (event) => {
-    event.preventDefault()
-    const formData = new FormData(form)
-    const { error } = await actions.send(formData)
-    if (!error) {navigate("/contactanos")} else{
-      console.log(error)
-    }
+  document.addEventListener("astro:page-load", () => {
+    const form = document.querySelector("form")
+    form?.addEventListener("submit", async (event) => {
+      event.preventDefault()
+      const formData = new FormData(form)
+      const { error } = await actions.send(formData)
+      if (!error) {
+        navigate("/contactanos")
+      } else {
+        console.log(error)
+      }
+    })
   })
 </script>
 
 <style>
-  textarea{
+  textarea {
     field-sizing: content;
   }
   section > fieldset:not(:last-child) {
