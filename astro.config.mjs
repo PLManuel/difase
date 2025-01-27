@@ -14,7 +14,6 @@ export default defineConfig({
       RESEND_API_KEY: envField.string({ context: "server", access: "secret" }),
     },
   },
-  output: "static",
   site: "https://difase-web.vercel.app/",
   adapter: vercel(),
   integrations: [
