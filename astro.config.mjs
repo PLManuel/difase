@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config"
+import { defineConfig, envField } from "astro/config"
 import tailwind from "@astrojs/tailwind"
 import vercel from "@astrojs/vercel"
 import react from "@astrojs/react"
@@ -9,6 +9,13 @@ let prefixCounter = 0
 
 // https://astro.build/config
 export default defineConfig({
+  env: {
+    schema: {
+      RESEND_API_KEY: envField.string({ context: "server", access: "secret" }),
+    },
+  },
+  output: "static",
+  site: "https://difase-web.vercel.app/",
   adapter: vercel(),
   integrations: [
     tailwind(),
