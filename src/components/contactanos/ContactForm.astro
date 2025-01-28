@@ -1,37 +1,30 @@
-<form class="mt-5 max-w-screen-md mx-auto">
+<form class="mt-5">
   <fieldset disabled={false}>
-    <section
-      class="grid sm:grid-cols-2 grid-cols-1 gap-5 mb-5 p-6 rounded-sm bg-blue-50 border border-blue-400"
-    >
-      <fieldset>
-        <label for="">Nombre:</label>
-        <input name="username" required type="text" />
-      </fieldset>
-      <fieldset>
-        <label for="">Correo:</label>
-        <input name="email" required type="email" />
-      </fieldset>
-      <fieldset>
-        <label for="">Telefono:</label>
-        <input name="phone" required type="tel" />
-      </fieldset>
-      <fieldset>
-        <label for="">Sector:</label>
-        <select name="sector" required id="">
-          <option value="sector01">sector01</option>
-          <option value="sector02">sector02</option>
-          <option value="sector03">sector03</option>
-          <option value="otro">otro</option>
-        </select>
-      </fieldset>
-      <fieldset class="sm:col-span-2 col-span-1 w-full flex flex-col gap-2">
-        <label for="">Comentario:</label>
-        <textarea
-          class="border border-blue-700 disabled:bg-slate-100 outline-offset-0 focus:outline-2 focus:outline-blue-400 px-2 py-1 transition-all duration-100 outline-0 outline-none rounded-sm max-h-40 min-h-20 resize-none"
-          name="comment"
-          id=""></textarea>
-      </fieldset>
-    </section>
+    <fieldset>
+      <label for="">Nombre:</label>
+      <input name="username" required type="text" />
+    </fieldset>
+    <fieldset>
+      <label for="">Correo:</label>
+      <input name="email" required type="email" />
+    </fieldset>
+    <fieldset>
+      <label for="">Telefono:</label>
+      <input name="phone" required type="tel" />
+    </fieldset>
+    <fieldset>
+      <label for="">Sector:</label>
+      <select name="sector" required id="">
+        <option value="sector01">sector01</option>
+        <option value="sector02">sector02</option>
+        <option value="sector03">sector03</option>
+        <option value="otro">otro</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <label for="">Comentario:</label>
+      <textarea name="comment" id=""></textarea>
+    </fieldset>
     <button
       type="submit"
       class="border block ml-auto py-2 px-4 text-white bg-blue-900 disabled:bg-blue-950"
@@ -63,19 +56,17 @@
 </script>
 
 <style>
+  input,
+  select,
+  textarea {
+    @apply border border-blue-700 disabled:bg-slate-100 outline-offset-0 focus:outline-2 focus:outline-blue-400 px-2 py-1 transition-all duration-100 outline-0 outline-none rounded-sm min-h-10 resize-none max-h-40;
+  }
+
   textarea {
     field-sizing: content;
+    @apply min-h-20;
   }
-  section > fieldset:not(:last-child) {
-    @apply flex max-md:flex-col md:items-center;
-  }
-
-  section > fieldset:not(:last-child) > label {
-    @apply w-20 max-md:mb-2;
-  }
-
-  input,
-  select {
-    @apply border border-blue-700 disabled:bg-slate-100 outline-offset-0 focus:outline-2 focus:outline-blue-400 px-2 py-1 transition-all duration-100 outline-0 outline-none rounded-sm flex-1 h-10 max-md:py-2;
+  fieldset > fieldset {
+    @apply flex flex-col gap-2 mb-4;
   }
 </style>
