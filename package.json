@@ -12,11 +12,11 @@
   "dependencies": {
     "@react-email/components": "0.0.32",
     "@react-email/render": "1.0.4",
-    "@astrojs/react": "4.1.6",
+    "@astrojs/react": "4.2.0",
     "react-dom": "19.0.0",
     "resend": "4.1.1",
     "react": "19.0.0",
-    "astro": "5.1.9"
+    "astro": "5.1.10"
   },
   "devDependencies": {
     "@astrojs/tailwind": "5.1.5",

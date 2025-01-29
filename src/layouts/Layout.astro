@@ -6,6 +6,7 @@ import Footer from "@/components/Footer.astro"
 
 interface Props {
   title: string
+  hero?: boolean
   isIndex?: boolean
   isNosotros?: boolean
   isCatalogo?: boolean
@@ -15,6 +16,7 @@ interface Props {
 
 const {
   title,
+  hero = false,
   isIndex = false,
   isNosotros = false,
   isCatalogo = false,
@@ -39,6 +41,7 @@ const pageTitle = isIndex ? title : `Difase | ${title}`
   </head>
   <body class="font-quicksand">
     <Navbar
+      hero={hero}
       inicio={isIndex}
       nosotros={isNosotros}
       catalogo={isCatalogo}

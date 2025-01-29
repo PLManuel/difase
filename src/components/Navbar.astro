@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components"
 import Modal from "./Modal.astro"
 
 interface Props {
+  hero?:boolean
   inicio?: boolean
   nosotros?: boolean
   catalogo?: boolean
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const {
+  hero= false,
   inicio = false,
   nosotros = false,
   catalogo = false,
@@ -58,7 +60,7 @@ const {
     </Modal>
   </aside>
   <section
-    class=`backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center relative ${inicio ? "text-white" : "text-blue-950"}`
+    class=`backdrop-blur bg-white/20 shadow-lg flex max-md:flex-wrap justify-between py-3 px-4 items-center relative ${hero ? "text-white" : "text-blue-950"}`
   >
     <a href="/" class="flex items-center gap-2">
       <img src="isotipo.svg" class="w-8 lg:w-12" alt="" />

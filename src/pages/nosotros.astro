@@ -1,8 +1,251 @@
 ---
-import Espacio from "@/assets/Espacio.astro"
 import Layout from "@/layouts/Layout.astro"
 ---
 
-<Layout title="Nosotros" isNosotros>
-  <Espacio />
+<Layout title="Nosotros" isNosotros hero>
+  <section class="h-96 bg-blue-900 flex justify-center">
+    <div class="mt-48">
+      <h1 class="font-energy text-5xl text-white uppercase">sobre nosotros</h1>
+    </div>
+  </section>
+  <div class="px-5 max-w-screen-sm mx-auto -mt-24">
+    <img
+      src=""
+      class="aspect-video bg-slate-500 object-cover object-top"
+      alt="imagen"
+    />
+    <h2
+      class="text-center font-oblivion text-blue-900 text-4xl tracking-widest my-4"
+    >
+      Difase
+    </h2>
+    <p class="mb-2">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nisi
+      deserunt veritatis, sapiente placeat libero recusandae provident iure. Et,
+      veniam debitis quisquam voluptate quam dolor.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ratione
+      eaque, aspernatur eum temporibus veritatis quas praesentium accusamus id
+      modi quos, et odit officiis labore! Ratione iste inventore maxime
+      obcaecati.
+    </p>
+  </div>
+  <section class="grid grid-cols-2 mt-16 h-[30rem]">
+    <article
+      class="bg-blue-900 flex flex-col items-center justify-center text-white"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="size-20"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
+          d="M12 7a5 5 0 1 0 5 5"></path><path
+          d="M13 3.055a9 9 0 1 0 7.941 7.945"></path><path
+          d="M15 6v3h3l3 -3h-3v-3z"></path><path d="M15 9l-3 3"></path></svg
+      >
+      <h3 class="font-energy text-4xl uppercase">Misión</h3>
+    </article>
+    <article class="bg-slate-100 flex items-center px-2 text-center">
+      <p class="max-w-[30rem] mx-auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        dicta repellendus, natus voluptatem laudantium necessitatibus eveniet
+        voluptate cupiditate dolorum commodi fuga reiciendis deserunt suscipit
+        accusamus.
+      </p>
+    </article>
+    <article class="bg-slate-100 flex items-center px-2 text-center">
+      <p class="max-w-[30rem] mx-auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        dicta repellendus, natus voluptatem laudantium necessitatibus eveniet
+        voluptate cupiditate dolorum commodi fuga reiciendis deserunt suscipit
+        accusamus.
+      </p>
+    </article>
+    <article
+      class="bg-blue-900 flex flex-col items-center justify-center text-white"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="size-20"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path
+          d="M12 18c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.09 .15 -.18 .295 -.27 .439"
+        ></path><path d="M19 22v-6"></path><path d="M22 19l-3 -3l-3 3"
+        ></path></svg
+      >
+      <h3 class="font-energy text-4xl uppercase">Visión</h3>
+    </article>
+  </section>
+  <section class="mt-16">
+    <div class="relative min-h-96 flex items-center justify-center bg-black">
+      <img
+        src="images/DSC_0083.webp"
+        class="absolute w-full h-full object-cover opacity-30"
+        alt=""
+      />
+      <h2 class="uppercase text-5xl font-energy text-white tracking-wider z-10">
+        Nuestros valores
+      </h2>
+    </div>
+    <div
+      class="max-w-screen-xl mx-auto flex justify-between gap-2 flex-wrap z-20"
+    >
+      <article class="bg-blue-950 p-10 text-white w-96 border-2">
+        <div
+          class="relative -mt-24 mx-auto w-fit border-2 bg-blue-950 rounded-full p-5"
+        >
+          <svg
+            viewBox="0 0 1024 1024"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="size-14"
+            ><path
+              d="M678.584675 765.172506v157.995691l75.697852 31.505938V723.768586a429.379161 429.379161 0 0 1-75.697852 41.40392zM269.717473 723.768586V953.098138l75.697852-31.505938v-156.419694a429.309162 429.309162 0 0 1-75.697852-41.40392zM511.999 798.78444a428.955162 428.955162 0 0 1-105.993793-13.241974v238.457534L511.999 979.886086 617.992793 1023.998V785.542466A429.025162 429.025162 0 0 1 511.999 798.78444zM511.999 0C308.479398 0 142.903721 165.575677 142.903721 369.097279S308.479398 738.192558 511.999 738.192558s369.097279-165.575677 369.097279-369.097279S715.520602 0 511.999 0z m0 660.198711c-161.345685 0-292.611428-131.265744-292.611428-292.611429 0-161.347685 131.265744-292.613428 292.611428-292.613428s292.611428 131.265744 292.611428 292.613428c0 161.347685-131.263744 292.611428-292.611428 292.611429zM511.999 135.563735c-127.93575 0-232.021547 104.083797-232.021547 232.023547S384.06325 599.606829 511.999 599.606829s232.021547-104.083797 232.021547-232.021547c0-127.93775-104.083797-232.021547-232.021547-232.021547zM607.360814 502.999018L511.999 452.865115 416.639186 502.999018l18.211965-106.183793-77.14785-75.199853 106.617792-15.49397L511.999 209.509591l47.679907 96.611811 106.617792 15.49397-77.14785 75.199853 18.211965 106.183793z"
+            ></path></svg
+          >
+        </div>
+        <h3
+          class="text-2xl uppercase font-energy text-center tracking-wide my-4"
+        >
+          Calidad y Precisión
+        </h3>
+        <p class="text-blue-50 text-center">
+          Nos comprometemos a fabricar maquinaria industrial con los más altos
+          estándares de calidad, utilizando materiales resistentes y tecnología
+          avanzada. Cada equipo que producimos es sometido a rigurosos controles
+          de calidad para garantizar su eficiencia, durabilidad y seguridad.
+          Nuestro objetivo es proporcionar soluciones confiables que optimicen
+          los procesos productivos de nuestros clientes y maximicen su
+          inversión.
+        </p>
+      </article>
+      <article class="bg-blue-950 p-10 text-white w-96 border-2">
+        <div
+          class="relative -mt-24 mx-auto w-fit bg-blue-950 border-2 rounded-full p-5"
+        >
+          <svg
+            viewBox="0 -8 72 72"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="size-14"
+            ><path
+              d="M64,12.78v17s-3.63.71-4.38.81-3.08.85-4.78-.78C52.22,27.25,42.93,18,42.93,18a3.54,3.54,0,0,0-4.18-.21c-2.36,1.24-5.87,3.07-7.33,3.78a3.37,3.37,0,0,1-5.06-2.64,3.44,3.44,0,0,1,2.1-3c3.33-2,10.36-6,13.29-7.52,1.78-1,3.06-1,5.51,1C50.27,12,53,14.27,53,14.27a2.75,2.75,0,0,0,2.26.43C58.63,14,64,12.78,64,12.78ZM27,41.5a3,3,0,0,0-3.55-4.09,3.07,3.07,0,0,0-.64-3,3.13,3.13,0,0,0-3-.75,3.07,3.07,0,0,0-.65-3,3.38,3.38,0,0,0-4.72.13c-1.38,1.32-2.27,3.72-1,5.14s2.64.55,3.72.3c-.3,1.07-1.2,2.07-.09,3.47s2.64.55,3.72.3c-.3,1.07-1.16,2.16-.1,3.46s2.84.61,4,.25c-.45,1.15-1.41,2.39-.18,3.79s4.08.75,5.47-.58a3.32,3.32,0,0,0,.3-4.68A3.18,3.18,0,0,0,27,41.5Zm25.35-8.82L41.62,22a3.53,3.53,0,0,0-3.77-.68c-1.5.66-3.43,1.56-4.89,2.24a8.15,8.15,0,0,1-3.29,1.1,5.59,5.59,0,0,1-3-10.34C29,12.73,34.09,10,34.09,10a6.46,6.46,0,0,0-5-2C25.67,8,18.51,12.7,18.51,12.7a5.61,5.61,0,0,1-4.93.13L8,10.89v19.4s1.59.46,3,1a6.33,6.33,0,0,1,1.56-2.47,6.17,6.17,0,0,1,8.48-.06,5.4,5.4,0,0,1,1.34,2.37,5.49,5.49,0,0,1,2.29,1.4A5.4,5.4,0,0,1,26,34.94a5.47,5.47,0,0,1,3.71,4,5.38,5.38,0,0,1,2.39,1.43,5.65,5.65,0,0,1,1.48,4.89,0,0,0,0,1,0,0s.8.9,1.29,1.39a2.46,2.46,0,0,0,3.48-3.48s2,2.48,4.28,1c2-1.4,1.69-3.06.74-4a3.19,3.19,0,0,0,4.77.13,2.45,2.45,0,0,0,.13-3.3s1.33,1.81,4,.12c1.89-1.6,1-3.43,0-4.39Z"
+            ></path></svg
+          >
+        </div>
+        <h3
+          class="text-2xl uppercase font-energy text-center tracking-wide my-4"
+        >
+          Compromiso con el Cliente
+        </h3>
+        <p class="text-blue-50 text-center">
+          Entendemos que cada cliente tiene necesidades específicas, por lo que
+          trabajamos en estrecha colaboración para ofrecer soluciones a medida.
+          Desde la planificación hasta la entrega, brindamos asesoría técnica,
+          personalización y un servicio postventa de excelencia. Nos esforzamos
+          por construir relaciones de confianza a largo plazo, garantizando el
+          cumplimiento de los plazos y la satisfacción total en cada proyecto.
+        </p>
+      </article>
+      <article class="bg-blue-950 border-2 p-10 text-white w-96">
+        <div
+          class="relative -mt-24 mx-auto w-fit border-2 bg-blue-950 rounded-full p-5"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="size-14"
+          >
+            <path
+              d="M9 6C9 7.65685 10.3431 9 12 9C13.6569 9 15 7.65685 15 6C15 4.34315 13.6569 3 12 3C10.3431 3 9 4.34315 9 6Z"
+            ></path>
+            <path
+              d="M2.5 18C2.5 19.6569 3.84315 21 5.5 21C7.15685 21 8.5 19.6569 8.5 18C8.5 16.3431 7.15685 15 5.5 15C3.84315 15 2.5 16.3431 2.5 18Z"
+            ></path>
+            <path
+              d="M18.5 21C16.8431 21 15.5 19.6569 15.5 18C15.5 16.3431 16.8431 15 18.5 15C20.1569 15 21.5 16.3431 21.5 18C21.5 19.6569 20.1569 21 18.5 21Z"
+            ></path>
+            <path
+              d="M7.20468 7.56231C7.51523 7.28821 7.54478 6.81426 7.27069 6.5037C6.99659 6.19315 6.52264 6.1636 6.21208 6.43769C4.39676 8.03991 3.25 10.3865 3.25 13C3.25 13.4142 3.58579 13.75 4 13.75C4.41421 13.75 4.75 13.4142 4.75 13C4.75 10.8347 5.69828 8.89187 7.20468 7.56231Z"
+            ></path>
+            <path
+              d="M17.7879 6.43769C17.4774 6.1636 17.0034 6.19315 16.7293 6.5037C16.4552 6.81426 16.4848 7.28821 16.7953 7.56231C18.3017 8.89187 19.25 10.8347 19.25 13C19.25 13.4142 19.5858 13.75 20 13.75C20.4142 13.75 20.75 13.4142 20.75 13C20.75 10.3865 19.6032 8.03991 17.7879 6.43769Z"
+            ></path>
+            <path
+              d="M10.1869 20.0217C9.7858 19.9184 9.37692 20.1599 9.27367 20.561C9.17043 20.9622 9.41192 21.3711 9.81306 21.4743C10.5129 21.6544 11.2458 21.75 12 21.75C12.7542 21.75 13.4871 21.6544 14.1869 21.4743C14.5881 21.3711 14.8296 20.9622 14.7263 20.561C14.6231 20.1599 14.2142 19.9184 13.8131 20.0217C13.2344 20.1706 12.627 20.25 12 20.25C11.373 20.25 10.7656 20.1706 10.1869 20.0217Z"
+            ></path>
+          </svg>
+        </div>
+        <h3
+          class="text-2xl uppercase font-energy text-center tracking-wide my-4"
+        >
+          Colaboración y Respeto
+        </h3>
+        <p class="text-blue-50 text-center">
+          Fomentamos un ambiente de trabajo basado en el respeto mutuo, la
+          comunicación efectiva y el trabajo en equipo. Creemos que la
+          cooperación entre nuestros colaboradores, proveedores y clientes es
+          clave para el éxito de cada proyecto. Valoramos la diversidad de ideas
+          y experiencias, promoviendo un entorno donde todos pueden contribuir
+          al crecimiento y la mejora continua de la empresa.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section class="max-w-screen-lg mx-auto mt-20">
+    <h2 class="font-energy text-5xl text-blue-900 uppercase mb-10">
+      Ellos confian en nosotros
+    </h2>
+    <div class="flex flex-wrap justify-between gap-x-4 gap-y-8">
+      <img
+        class="h-16 saturate-0 hover:saturate-100 transition-all duration-300"
+        src="images/clients/agrovado-logo.png"
+        alt=""
+      />
+      <img
+        class="h-16 saturate-0 hover:saturate-100 transition-all duration-300"
+        src="images/clients/bhp-logo.svg"
+        alt=""
+      />
+      <img
+        class="h-16 saturate-0 hover:saturate-100 transition-all duration-300"
+        src="images/clients/cerroVerde-logo.svg"
+        alt=""
+      />
+      <img
+        class="h-16 saturate-0 hover:saturate-100 transition-all duration-300"
+        src="images/clients/eriez-logo.png"
+        alt=""
+      />
+      <img
+        class="h-16 saturate-0 hover:saturate-100 transition-all duration-300"
+        src="images/clients/genco-logo.png"
+        alt=""
+      />
+      <img
+        class="h-16 saturate-0 hover:saturate-100 transition-all duration-300"
+        src="images/clients/pfizer-logo.svg"
+        alt=""
+      />
+      <img
+        class="h-16 saturate-0 hover:saturate-100 transition-all duration-300"
+        src="images/clients/roxfarma-logo.png"
+        alt=""
+      />
+    </div>
+  </section>
 </Layout>
