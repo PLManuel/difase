@@ -1,20 +1,20 @@
-<form class="mt-5">
-  <fieldset disabled={false}>
+<form id="contact-form" class="mt-5">
+  <fieldset>
     <fieldset>
       <label for="">Nombre:</label>
-      <input name="username" required type="text" />
+      <input name="username" type="text" />
     </fieldset>
     <fieldset>
       <label for="">Correo:</label>
-      <input name="email" required type="email" />
+      <input name="email" type="email" />
     </fieldset>
     <fieldset>
       <label for="">Telefono:</label>
-      <input name="phone" required type="tel" />
+      <input name="phone" type="tel" />
     </fieldset>
     <fieldset>
       <label for="">Sector:</label>
-      <select name="sector" required id="">
+      <select name="sector" id="">
         <option value="sector01">sector01</option>
         <option value="sector02">sector02</option>
         <option value="sector03">sector03</option>
@@ -34,26 +34,7 @@
   </fieldset>
 </form>
 
-<script>
-  import { actions } from "astro:actions"
-  import { navigate } from "astro:transitions/client"
-
-  document.addEventListener("astro:page-load", () => {
-    const form = document.querySelector("form")
-    if (form) {
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault()
-        const formData = new FormData(form)
-        const { error } = await actions.send(formData)
-        if (!error) {
-          navigate("/contactanos")
-        } else {
-          console.log(error)
-        }
-      })
-    }
-  })
-</script>
+<script src="/src/utils/contactForm.js"></script>
 
 <style>
   input,
