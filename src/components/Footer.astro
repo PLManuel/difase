@@ -1,16 +1,14 @@
 ---
 interface Props {
   contactanos?: boolean
+  servicios?: boolean
 }
-const {contactanos = "false"} = Astro.props
+const { contactanos = "false", servicios = "false" } = Astro.props
 import { Icon } from "astro-icon/components"
 import Contactanos from "./Contactanos.astro"
 ---
-{
-  !contactanos && (
-    <Contactanos />
-  )
-}
+
+{!(servicios || contactanos) && <Contactanos />}
 
 <footer class="bg-[rgb(0,20,87)] relative text-white">
   <div id="footer-bg" class="inset-x-0 top-0 -z-30 bg-black/10"></div>
