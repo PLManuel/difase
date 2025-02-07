@@ -29,14 +29,14 @@ const { size = "md" } = Astro.props
   />
 </div>
 <dialog
-  class={`modal max-w-screen-${size} w-auto rounded-lg shadow-md overflow-hidden bg-transparent backdrop:bg-black/30`}
+  class={`modal max-w-screen-${size} m-auto w-auto rounded-lg shadow-md bg-transparent backdrop:bg-black/30`}
 >
   <div class="mx-2 bg-white rounded-sm p-2">
     <main class="modal-content bg-white">
       <slot />
     </main>
     <button
-      class="btn-close mt-4 ml-auto px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 block"
+      class="btn-close mt-2 ml-auto px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 block"
       >Cerrar</button
     >
   </div>

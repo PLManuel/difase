@@ -5,33 +5,36 @@
     ¿Quienes somos?
   </h2>
   <p class="max-w-screen-sm mx-auto mt-3 text-center max-sm:text-sm">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima ad incidunt
-    ipsa expedita, laborum praesentium ratione doloribus esse eius aspernatur
-    quidem voluptatum numquam. Dolores aspernatur est eos error, sed deleniti!
+    En Difase, nos enorgullece ser una empresa líder en el diseño, fabricación y
+    mantenimiento de maquinaria industrial, con más de 12 años de experiencia en
+    el sector. Nos especializamos en ofrecer soluciones integrales y
+    personalizadas para todas las industrias. Nuestro compromiso es brindar
+    equipos de alta calidad, innovadores y eficientes, respaldados por un equipo
+    de profesionales altamente capacitados y un estricto control de calidad.
   </p>
   <div
     class="md:mt-10 mt-5 flex max-md:flex-wrap justify-center md:gap-5 gap-2 max-md:items-center px-2"
   >
-    <div class="drop-shadow-xl">
+    <div>
       <img
         src="images/inicio/quienes-somos-1.webp"
         alt=""
-        class="object-cover w-52 h-72 max-[555px]:w-full max-[555px]:h-auto max-[555px]:object-center"
+        class="w-52 h-72"
         style="clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%);"
       />
     </div>
-    <div class="drop-shadow-xl">
+    <div>
       <img
         src="images/inicio/quienes-somos-2.webp"
         alt=""
-        class="object-cover h-[80%] w-80 max-[555px]:w-full max-[555px]:h-auto max-[555px]:object-center"
+        class="h-[80%] w-80"
       />
     </div>
-    <div class="drop-shadow-xl max-md:order-first">
+    <div class="max-md:order-first">
       <img
         src="images/inicio/quienes-somos-3.webp"
         alt=""
-        class="object-cover object-[-90px] w-52 h-72 max-[555px]:w-full max-[555px]:h-auto max-[555px]:object-center"
+        class="object-[-90px] w-52 h-72"
         style="clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0 80%);"
       />
     </div>
@@ -48,6 +51,16 @@
   @media (max-width: 768px) {
     img {
       clip-path: none !important;
+    }
+  }
+</style>
+
+<style>
+  @reference "@/styles/global.css";
+  section > div > div {
+    @apply drop-shadow-xl;
+    > img {
+      @apply max-[555px]:w-full max-[555px]:h-auto max-[555px]:object-center object-cover;
     }
   }
 </style>

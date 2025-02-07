@@ -1,9 +1,9 @@
 // @ts-check
 import { defineConfig, envField } from "astro/config"
-import tailwind from "@astrojs/tailwind"
 import vercel from "@astrojs/vercel"
 import react from "@astrojs/react"
 import icon from "astro-icon"
+import tailwindcss from "@tailwindcss/vite"
 
 let prefixCounter = 0
 
@@ -16,8 +16,10 @@ export default defineConfig({
   },
   site: "https://difase-web.vercel.app/",
   adapter: vercel(),
+  vite: {
+    plugins: [tailwindcss()],
+  },
   integrations: [
-    tailwind(),
     react(),
     icon({
       iconDir: "src/assets/icons",

@@ -27,9 +27,9 @@
         Descubra nuestro catalogo
       </h2>
       <p class="md:mx-10 mx-12 max-md:text-sm">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod enim odit
-        cumque saepe non perspiciatis sequi beatae! Quae, reprehenderit
-        deleniti.
+        Desde maquinaria especializada hasta sistemas de automatización,
+        ofrecemos productos innovadores y de alta calidad. ¡Encuentra lo que
+        necesitas para llevar tu empresa al siguiente nivel!
       </p>
       <a
         href="/catalogo"
@@ -42,10 +42,6 @@
 </section>
 
 <style>
-  img {
-    @apply border-white border-2 absolute;
-  }
-
   section > img:nth-child(1) {
     animation: parallax-img1 1s linear forwards;
     view-timeline: --appears block 30% auto;
@@ -92,5 +88,13 @@
     to {
       transform: translateY(100px) rotate(-3deg);
     }
+  }
+</style>
+
+<style>
+  @reference "@/styles/global.css";
+
+  img {
+    @apply border-white border-2 absolute;
   }
 </style>

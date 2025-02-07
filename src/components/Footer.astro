@@ -1,16 +1,17 @@
 ---
+import { Icon } from "astro-icon/components"
+import Contactanos from "./Contactanos.astro"
+
 interface Props {
   contactanos?: boolean
   servicios?: boolean
 }
 const { contactanos = "false", servicios = "false" } = Astro.props
-import { Icon } from "astro-icon/components"
-import Contactanos from "./Contactanos.astro"
 ---
 
 {!(servicios || contactanos) && <Contactanos />}
 
-<footer class="bg-[rgb(0,20,87)] relative text-white">
+<footer class="bg-[#001457] relative text-white">
   <div id="footer-bg" class="inset-x-0 top-0 -z-30 bg-black/10"></div>
   <section
     class="flex max-md:flex-col max-md:gap-y-7 mb-5 px-5 pb-5 pt-10 justify-between max-w-screen-lg mx-auto relative z-10"
@@ -65,10 +66,17 @@ import Contactanos from "./Contactanos.astro"
 
 <style>
   #footer-bg::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  background-size: 182px;
+}
+</style>
+
+<style>
+  @reference "@/styles/global.css";
+  
+  #footer-bg::before {
     @apply absolute left-0 top-0 h-full w-full transform-gpu bg-repeat opacity-20;
-    content: "";
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
-    background-size: 182px;
   }
   ul li {
     @apply mb-2 md:ml-4 max-md:text-center hover:text-blue-100 transition-colors duration-300;
