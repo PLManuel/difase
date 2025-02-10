@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply scroll-mt-28;
+}
+
 @font-face {
   font-family: "Oblivion";
   font-style: normal;

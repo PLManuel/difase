@@ -1,7 +1,7 @@
 {
   "name": "difase",
   "type": "module",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -18,10 +18,10 @@
   "devDependencies": {
     "@astrojs/react": "4.2.0",
     "@astrojs/vercel": "8.0.6",
-    "@react-email/components": "0.0.32",
-    "@react-email/render": "1.0.4",
-    "tailwindcss": "4.0.4",
-    "@tailwindcss/vite": "4.0.4",
+    "@react-email/components": "0.0.33",
+    "@react-email/render": "1.0.5",
+    "tailwindcss": "4.0.6",
+    "@tailwindcss/vite": "4.0.6",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "astro-icon": "1.1.5",

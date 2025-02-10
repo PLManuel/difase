@@ -17,6 +17,7 @@ import Layout from "@/layouts/Layout.astro"
   </div>
   <div class="max-w-screen-lg mt-12 px-4 mx-auto flex justify-end">
     <h2
+      id="servicios-generales"
       class="servGene text-blue-900 uppercase font-energy text-3xl tracking-wider md:text-4xl relative w-fit"
     >
       Servicios generales
@@ -30,7 +31,9 @@ import Layout from "@/layouts/Layout.astro"
       class="mx-auto px-8 md:px-4 max-md:py-4 max-w-screen-lg flex max-md:flex-col items-center text-white justify-between gap-4 max-md:mt-10"
     >
       <div class="md:mb-8 md:pl-2 max-w-[42rem]">
-        <h3>Diseño y Fabricación de Máquinas</h3>
+        <h3 id="diseño-y-fabricacion-de-maquinas">
+          Diseño y Fabricación de Máquinas
+        </h3>
         <p class="mb-6 max-lg:text-sm">
           Aplicando los medios modernos de Diseño Asistido por Computador en 2D
           y 3D, el equipo de técnicos especialistas en mecánica aplicada
@@ -69,7 +72,7 @@ import Layout from "@/layouts/Layout.astro"
         alt=""
       />
       <div class="max-w-[42rem] pl-4">
-        <h3>Reingeniería de Máquinas</h3>
+        <h3 id="reingenieria-de-maquinas">Reingeniería de Máquinas</h3>
         <p class="text-[.9rem] mb-2">
           A medida que vayan ocurriendo expansiones y modernizaciones en las
           plantas de procesos, los requerimientos de la maquinaria en servicio
@@ -98,7 +101,7 @@ import Layout from "@/layouts/Layout.astro"
       class="mx-auto px-8 md:px-4 max-md:py-4 max-w-screen-lg flex max-md:flex-col items-center text-white justify-between gap-4 max-md:mt-10"
     >
       <div class="md:mb-8 md:pl-2 max-w-[42rem]">
-        <h3>Diseño y Montaje Eléctrico</h3>
+        <h3 id="diseño-y-montaje-electrico">Diseño y Montaje Eléctrico</h3>
         <p class="mb-3 max-lg:text-sm">
           Para el diseño e instalación de cuadros eléctricos, utilizamos
           herramientas CAD junto con documentación técnica, asegurando el
@@ -136,7 +139,9 @@ import Layout from "@/layouts/Layout.astro"
         alt=""
       />
       <div class="max-w-[42rem] pl-4">
-        <h3>Automatización e Instrumentación Industrial</h3>
+        <h3 id="automatización-e-instrumentación-industrial">
+          Automatización e Instrumentación Industrial
+        </h3>
         <p class="text-[.9rem] md:mb-6">
           Nuestras soluciones de automatización & Instrumentación son
           integrales, realizamos la programación ,configuración e integración de
@@ -163,12 +168,15 @@ import Layout from "@/layouts/Layout.astro"
   </section>
   <div class="max-w-screen-lg mt-6 px-4 mx-auto flex">
     <h2
+      id="servicios-por-sector"
       class="servSect text-blue-900 uppercase font-energy text-3xl tracking-wider md:text-4xl relative w-fit"
     >
       Servicios por Sector
     </h2>
   </div>
-  <section class="max-w-screen-xl px-4 min-h-96 mx-auto mt-10 grid md:grid-cols-2">
+  <section
+    class="max-w-screen-xl px-4 min-h-96 mx-auto mt-10 grid md:grid-cols-2"
+  >
     <div class="md:pr-4 max-md:order-last">
       <img
         src="images/bg-sector-farmaceutico.jpg"
@@ -212,9 +220,15 @@ import Layout from "@/layouts/Layout.astro"
       </a>
     </div>
   </section>
-  <section class="max-w-screen-xl px-4 min-h-96 mx-auto mt-10 md:mt-5 grid md:grid-cols-2">
+  <section
+    class="max-w-screen-xl px-4 min-h-96 mx-auto mt-10 md:mt-5 grid md:grid-cols-2"
+  >
     <div class="md:pr-4 max-md:order-last">
-      <img src="images/bg-sector-alimentaria.avif" class="h-full w-full object-cover" alt="">
+      <img
+        src="images/bg-sector-alimentaria.avif"
+        class="h-full w-full object-cover"
+        alt=""
+      />
       <!-- <div class="h-full w-full relative">
         <img
           src="images/bg-sector-alimentaria.avif"
@@ -263,7 +277,9 @@ import Layout from "@/layouts/Layout.astro"
       </a>
     </div>
   </section>
-  <section class="max-w-screen-xl px-4 -mb-10 min-h-96 mx-auto mt-10 md:mt-5 grid md:grid-cols-2">
+  <section
+    class="max-w-screen-xl px-4 -mb-10 min-h-96 mx-auto mt-10 md:mt-5 grid md:grid-cols-2"
+  >
     <div class="md:pr-4 max-md:order-last">
       <img
         src="images/inicio/temp/slide-sector-minero.webp"
@@ -309,7 +325,7 @@ import Layout from "@/layouts/Layout.astro"
 <style>
   @reference "@/styles/global.css";
   h3 {
-    @apply text-2xl font-energy uppercase tracking-wider scroll-mt-28 max-md:text-center max-md:mb-3;
+    @apply text-2xl font-energy uppercase tracking-wider max-md:text-center max-md:mb-3;
   }
 </style>
 
