@@ -1,10 +1,9 @@
 ---
-import Espacio from "@/assets/Espacio.astro"
 import Layout from "@/layouts/Layout.astro"
 ---
 
 <Layout title="Servicios" isServicios hero>
-  <section class="h-80 flex justify-center relative bg-black">
+  <div class="h-80 flex justify-center relative bg-black">
     <img
       src="images/DSC_0083.webp"
       class="absolute h-full w-full object-cover opacity-40"
@@ -15,8 +14,8 @@ import Layout from "@/layouts/Layout.astro"
         Nuestros servicios
       </h1>
     </div>
-  </section>
-  <div class="max-w-screen-lg mt-12 mx-auto flex justify-end">
+  </div>
+  <div class="max-w-screen-lg mt-12 px-4 mx-auto flex justify-end">
     <h2
       class="servGene text-blue-900 uppercase font-energy text-3xl tracking-wider md:text-4xl relative w-fit"
     >
@@ -24,20 +23,20 @@ import Layout from "@/layouts/Layout.astro"
     </h2>
   </div>
   <section
-    style="clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 85%);"
+    style="clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);"
     class="bg-blue-900"
   >
     <div
-      class="mx-auto px-4 max-w-screen-lg flex items-center text-white justify-between gap-4"
+      class="mx-auto px-8 md:px-4 max-md:py-4 max-w-screen-lg flex max-md:flex-col items-center text-white justify-between gap-4 max-md:mt-10"
     >
-      <div class="mb-8 max-w-[42rem]">
+      <div class="md:mb-8 md:pl-2 max-w-[42rem]">
         <h3>Diseño y Fabricación de Máquinas</h3>
-        <p class="mb-6">
+        <p class="mb-6 max-lg:text-sm">
           Aplicando los medios modernos de Diseño Asistido por Computador en 2D
           y 3D, el equipo de técnicos especialistas en mecánica aplicada
           desarrolla las siguientes actividades:
         </p>
-        <ul class="list-disc text-blue-100">
+        <ul class="list-disc text-blue-100 max-lg:text-sm">
           <li class="mb-2">
             Estudio y desarrollo de Sistemas Flexibles de Fabricación y
             manipulación, especialmente en áreas de montaje y manipulación
@@ -54,17 +53,21 @@ import Layout from "@/layouts/Layout.astro"
           </li>
         </ul>
       </div>
-      <img src="images/DSC_0064.webp" class="w-72" alt="" />
+      <img src="images/DSC_0064.webp" class="h-[25rem]" alt="" />
     </div>
   </section>
   <section
-    style="clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 85%);"
-    class="-mt-7 bg-gray-200"
+    style="clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);"
+    class="md:-mt-7 bg-gray-200"
   >
     <div
-      class="mx-auto px-4 max-w-screen-lg flex items-center text-blue-950 justify-between gap-4"
+      class="mx-auto px-8 md:px-4 max-md:py-4 max-w-screen-lg flex max-md:flex-col items-center text-blue-950 justify-between gap-4"
     >
-      <img src="images/DSC_0369.webp" class="w-72" alt="" />
+      <img
+        src="images/DSC_0369.webp"
+        class="h-[25rem] max-md:order-last"
+        alt=""
+      />
       <div class="max-w-[42rem] pl-4">
         <h3>Reingeniería de Máquinas</h3>
         <p class="text-[.9rem] mb-2">
@@ -88,24 +91,23 @@ import Layout from "@/layouts/Layout.astro"
     </div>
   </section>
   <section
-    style="clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 85%);"
-    class="-mt-7 bg-blue-900"
+    style="clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);"
+    class="bg-blue-900 md:-mt-7"
   >
     <div
-      class="mx-auto px-4 max-w-screen-lg flex items-center text-white justify-between gap-4"
+      class="mx-auto px-8 md:px-4 max-md:py-4 max-w-screen-lg flex max-md:flex-col items-center text-white justify-between gap-4 max-md:mt-10"
     >
-      <div class="max-w-[42rem] -mt-8">
+      <div class="md:mb-8 md:pl-2 max-w-[42rem]">
         <h3>Diseño y Montaje Eléctrico</h3>
-        <p class="text-[.9rem] mb-2">
+        <p class="mb-3 max-lg:text-sm">
           Para el diseño e instalación de cuadros eléctricos, utilizamos
           herramientas CAD junto con documentación técnica, asegurando el
           correcto dimensionamiento de los elementos según normativas vigentes.
           Además, seleccionamos cuidadosamente los materiales, garantizando que
           cumplan con los estándares de calidad y protección necesarios para
-          cada proyecto.
+          cada proyecto. Realizamos los siguientes servicios:
         </p>
-        <p class="text-[.9rem] mb-1">Realizamos los siguientes servicios :</p>
-        <ul class="text-[.9rem] list-disc">
+        <ul class="list-disc text-blue-100 max-lg:text-sm">
           <li>
             Diseño ,fabricación y montaje eléctrico de cuadros eléctricos.
           </li>
@@ -118,29 +120,29 @@ import Layout from "@/layouts/Layout.astro"
           <li>Mantenimiento preventivo y correctivo.</li>
         </ul>
       </div>
-      <img src="images/DSC_0068.webp" class="w-72" alt="" />
+      <img src="images/DSC_0068.webp" class="h-[25rem]" alt="" />
     </div>
   </section>
   <section
-    style="clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 85%);"
-    class="-mt-7 bg-gray-200"
+    style="clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);"
+    class="md:-mt-7 bg-gray-200"
   >
     <div
-      class="mx-auto px-4 max-w-screen-lg flex items-center text-blue-950 justify-between gap-4"
+      class="mx-auto px-6 md:px-4 max-md:py-4 max-w-screen-lg flex max-md:flex-col items-center text-blue-950 justify-between gap-4"
     >
       <img
         src="https://teltonika-networks.com/cdn/extras/11733/easy-customizable-remote-capabilities-for-siemens-plcsjpe.webp"
-        class="w-72 h-96 object-cover"
+        class="h-[25rem] w-72 object-cover max-md:order-last"
         alt=""
       />
       <div class="max-w-[42rem] pl-4">
         <h3>Automatización e Instrumentación Industrial</h3>
-        <p class="mb-2">
+        <p class="text-[.9rem] md:mb-6">
           Nuestras soluciones de automatización & Instrumentación son
           integrales, realizamos la programación ,configuración e integración de
           equipos de automatización de marcas como :
         </p>
-        <div class="flex gap-4 justify-between w-1/2">
+        <div class="flex gap-28 md:ml-10">
           <ul class="list-disc">
             <li>Siemens</li>
             <li>Allen Bradley</li>
@@ -159,21 +161,25 @@ import Layout from "@/layouts/Layout.astro"
       </div>
     </div>
   </section>
-  <div class="max-w-screen-lg mt-6 mx-auto flex">
+  <div class="max-w-screen-lg mt-6 px-4 mx-auto flex">
     <h2
       class="servSect text-blue-900 uppercase font-energy text-3xl tracking-wider md:text-4xl relative w-fit"
     >
       Servicios por Sector
     </h2>
   </div>
-  <section class="max-w-screen-xl px-4 min-h-96 mx-auto mt-10 grid grid-cols-2">
-    <div class="p-4">
-      <div class="bg-gray-500 h-full w-full">
-
-      </div>
+  <section class="max-w-screen-xl px-4 min-h-96 mx-auto mt-10 grid md:grid-cols-2">
+    <div class="md:pr-4 max-md:order-last">
+      <img
+        src="images/bg-sector-farmaceutico.jpg"
+        class="h-full w-full object-cover"
+        alt=""
+      />
     </div>
     <div class="flex justify-center flex-col">
-      <h3 id="sector-farmaceutico" class="text-blue-900">Sector Farmacéutico</h3>
+      <h3 id="sector-farmaceutico" class="text-blue-900">
+        Sector Farmacéutico
+      </h3>
       <p>
         En Difase, entendemos los altos estándares de calidad y precisión que
         exige la industria farmacéutica. Ofrecemos soluciones especializadas en
@@ -188,7 +194,7 @@ import Layout from "@/layouts/Layout.astro"
       </p>
       <a
         href="/"
-        class="proyectos bg-blue-800 p-3 uppercase font-oblivion mt-5 text-blue-50 overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-blue-950 flex items-center gap-2 w-[9.5rem] hover:w-fit hover:translate-x-2 group max-md:text-sm max-md:mx-auto text-sm"
+        class="proyectos bg-blue-800 p-3 mb-3 uppercase font-oblivion mt-5 text-blue-50 overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-blue-950 flex items-center gap-2 w-[9.5rem] hover:w-fit hover:translate-x-2 group max-md:text-sm max-md:mx-auto text-sm"
       >
         <span>proyectos</span>
         <svg
@@ -206,12 +212,22 @@ import Layout from "@/layouts/Layout.astro"
       </a>
     </div>
   </section>
-  <section class="max-w-screen-xl px-4 min-h-96 mx-auto mt-5 grid grid-cols-2">
-    <div class="p-4">
-      <div class="h-full w-full relative">
-        <div class="w-full h-full bg-gray-500 absolute"></div>
-        <div style="clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);" class="w-full h-full bg-gray-700 absolute"></div>
-      </div>
+  <section class="max-w-screen-xl px-4 min-h-96 mx-auto mt-10 md:mt-5 grid md:grid-cols-2">
+    <div class="md:pr-4 max-md:order-last">
+      <img src="images/bg-sector-alimentaria.avif" class="h-full w-full object-cover" alt="">
+      <!-- <div class="h-full w-full relative">
+        <img
+          src="images/bg-sector-alimentaria.avif"
+          class="w-full h-full object-cover absolute"
+          alt=""
+        />
+        <img
+          style="clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);"
+          src="images/inicio/temp/slide-sector-alimentario.webp"
+          class="w-full h-full object-cover absolute"
+          alt=""
+        />
+      </div> -->
     </div>
     <div class="flex justify-center flex-col">
       <h3 id="sector-alimentario" class="text-blue-900">Sector Alimentario</h3>
@@ -229,7 +245,7 @@ import Layout from "@/layouts/Layout.astro"
       </p>
       <a
         href="/"
-        class="proyectos bg-blue-800 p-3 uppercase font-oblivion mt-5 text-blue-50 overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-blue-950 flex items-center gap-2 w-[9.5rem] hover:w-fit hover:translate-x-2 group max-md:text-sm max-md:mx-auto text-sm"
+        class="proyectos mb-3 bg-blue-800 p-3 uppercase font-oblivion mt-5 text-blue-50 overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-blue-950 flex items-center gap-2 w-[9.5rem] hover:w-fit hover:translate-x-2 group max-md:text-sm max-md:mx-auto text-sm"
       >
         <span>proyectos</span>
         <svg
@@ -247,13 +263,13 @@ import Layout from "@/layouts/Layout.astro"
       </a>
     </div>
   </section>
-  <section class="max-w-screen-xl px-4 min-h-96 mx-auto mt-5 grid grid-cols-2">
-    <div class="p-4">
-      <div class="grid grid-cols-2 w-full h-full">
-        <div class="bg-gray-500"></div>
-        <div class="bg-gray-600"></div>
-        <div class="bg-gray-700 col-span-2"></div>
-      </div>
+  <section class="max-w-screen-xl px-4 -mb-10 min-h-96 mx-auto mt-10 md:mt-5 grid md:grid-cols-2">
+    <div class="md:pr-4 max-md:order-last">
+      <img
+        src="images/inicio/temp/slide-sector-minero.webp"
+        class="object-cover h-full w-full"
+        alt=""
+      />
     </div>
     <div class="flex justify-center flex-col">
       <h3 id="sector-minero" class="text-blue-900">Sector Minero</h3>
@@ -270,7 +286,7 @@ import Layout from "@/layouts/Layout.astro"
       </p>
       <a
         href="/"
-        class="proyectos bg-blue-800 p-3 uppercase font-oblivion mt-5 text-blue-50 overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-blue-950 flex items-center gap-2 w-[9.5rem] hover:w-fit hover:translate-x-2 group max-md:text-sm max-md:mx-auto text-sm"
+        class="proyectos mb-3 bg-blue-800 p-3 uppercase font-oblivion mt-5 text-blue-50 overflow-hidden -skew-x-12 transition-all duration-300 hover:bg-blue-950 flex items-center gap-2 w-[9.5rem] hover:w-fit hover:translate-x-2 group max-md:text-sm max-md:mx-auto text-sm"
       >
         <span>proyectos</span>
         <svg
@@ -293,7 +309,7 @@ import Layout from "@/layouts/Layout.astro"
 <style>
   @reference "@/styles/global.css";
   h3 {
-    @apply text-2xl font-energy uppercase tracking-wider scroll-mt-28;
+    @apply text-2xl font-energy uppercase tracking-wider scroll-mt-28 max-md:text-center max-md:mb-3;
   }
 </style>
 
@@ -320,5 +336,11 @@ import Layout from "@/layouts/Layout.astro"
     bottom: -0.5rem;
     left: 0;
     transform: skew(-12deg);
+  }
+
+  @media (width < 48rem) {
+    section {
+      clip-path: none !important;
+    }
   }
 </style>

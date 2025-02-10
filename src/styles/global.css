@@ -48,7 +48,7 @@
 }
 
 @theme {
-  --font-oblivion: "Oblivion", "system-ui";
-  --font-energy: "Energy", "system-ui";
-  --font-quicksand: "Quicksand", "system-ui";
+  --font-oblivion: "Oblivion", system-ui;
+  --font-energy: "Energy", system-ui;
+  --font-quicksand: "Quicksand", system-ui;
 }
