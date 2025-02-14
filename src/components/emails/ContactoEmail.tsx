@@ -13,7 +13,7 @@ import {
 
 interface SampleEmailProps {
   nombre: string
-  asunto?: string
+  asunto: string
   comentario: string
   telefono: string
   correo: string
@@ -23,10 +23,10 @@ const baseUrl = import.meta.env.SITE
 
 export default function SampleEmail({
   asunto = "Requiero mas informacion sobre sus servicios",
-  comentario,
   nombre,
-  telefono,
   correo,
+  telefono,
+  comentario,
 }: SampleEmailProps) {
   return (
     <Html>
@@ -36,7 +36,7 @@ export default function SampleEmail({
         <Container style={container}>
           <Section style={imageSection}>
             <Img
-              src={`${baseUrl}/imagotipo.svg`}
+              src={`${baseUrl}imagotipo.svg`}
               width="80"
               height="80"
               alt="Logo de Difase Machinery SAC"

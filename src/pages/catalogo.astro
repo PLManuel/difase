@@ -1,8 +1,167 @@
 ---
-import Espacio from "@/assets/Espacio.astro"
+import ItemProduct from "@/components/catalogo/ItemProduct.astro"
 import Layout from "@/layouts/Layout.astro"
 ---
 
 <Layout title="Catalogo" isCatalogo>
-
+  <div class="mt-40 px-8 max-w-screen-xl mx-auto">
+    <h1 class="font-energy text-5xl text-blue-900 uppercase">
+      Descubra nuestro catalogo de productos!
+    </h1>
+    <p>
+      Bienvenido al catálogo digital de Difase, donde la innovación y la calidad
+      se unen para ofrecerte soluciones industriales a medida. Aquí encontrarás
+      una amplia gama de maquinaria, equipos y servicios diseñados para
+      optimizar tus procesos en los sectores agroalimentario, farmacéutico,
+      minero y más.
+    </p>
+    <main class="mt-5">
+      <aside
+        class="bg-blue-900 sticky transition-all duration-300 overflow-x-hidden hover:overflow-x-auto top-20 mb-5 text-white py-4 px-8 -skew-x-12 border border-white"
+      >
+        <ul class="flex gap-16 skew-x-12 min-w-max">
+          <li><a href="#productos-nuevos">Nuevos</a></li>
+          <li><a href="#productos-populares">Populares</a></li>
+          <li><a href="#categoria-1">Categoria 1</a></li>
+          <li><a href="#categoria-2">Categoria 2</a></li>
+          <li><a href="#categoria-3">Categoria 3</a></li>
+        </ul>
+      </aside>
+      <section class="">
+        <h2
+          id="productos-nuevos"
+          class="text-center my-5 uppercase font-oblivion tracking-wider text-2xl text-blue-900"
+        >
+          Productos nuevos
+        </h2>
+        <div class="flex justify-center">
+          <div class="grid grid-flow-col gap-4 overflow-x-auto">
+            <ItemProduct name="Producto 1" />
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <h2
+          id="productos-populares"
+          class="text-center my-5 uppercase font-oblivion tracking-wider text-2xl text-blue-900"
+        >
+          Productos populares
+        </h2>
+        <div class="flex justify-center">
+          <div class="grid grid-flow-col gap-4 overflow-x-auto">
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <h2
+          id="categoria-1"
+          class="text-center my-5 uppercase font-oblivion tracking-wider text-2xl text-blue-900"
+        >
+          Categoria 1
+        </h2>
+        <div class="flex justify-center">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 min-[57rem]:grid-cols-3 min-[75rem]:grid-cols-4 gap-4"
+          >
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <h2
+          id="categoria-2"
+          class="text-center my-5 uppercase font-oblivion tracking-wider text-2xl text-blue-900"
+        >
+          Categoria 2
+        </h2>
+        <div class="flex justify-center">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 min-[57rem]:grid-cols-3 min-[75rem]:grid-cols-4 gap-4"
+          >
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <h2
+          id="categoria-3"
+          class="text-center my-5 uppercase font-oblivion tracking-wider text-2xl text-blue-900"
+        >
+          Categoria 3
+        </h2>
+        <div class="flex justify-center">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 min-[57rem]:grid-cols-3 min-[75rem]:grid-cols-4 gap-4"
+          >
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+            <article class="w-64 h-64 bg-blue-900 p-6 rounded-sm shadow-lg">
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </Layout>
+
+<style>
+  h2 {
+    scroll-margin-top: 10rem;
+  }
+  aside {
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
+</style>
